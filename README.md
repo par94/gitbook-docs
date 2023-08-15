@@ -58,4 +58,4 @@ If the above information was overwhelming, don't worry! We have plenty more reso
 * If you're a developer and want to start building with `xcall`, check out our Developer Quickstart and Examples.
 * Want to learn more about how the protocol works? Read through the How Connext Works section.
 * Are you an infrastructure operator? Help run the network by operating a Connext router.
-* Still not sure where to go? Join our [Discord](https://discord.gg/pef9AyEhNz) server and chat with us in the `#dev-hub` channel.
+* Still not sure where to go? Join our [Discord](https://discord.gg/pef9AyEhNz) server and chat with us in the `#dev-hub` channel!
