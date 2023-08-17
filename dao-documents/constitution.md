@@ -36,13 +36,13 @@ The core purpose of the Connext DAO is to realize the Connext vision by effectiv
 
 The Connext DAO is comprised of NEXT holders who vote on proposals submitted by members of the broader Connext Collective.
 
-The DAO has the following rights and responsibilities:
+The DAO has the following capabilities:
 
 * Allocating assets from treasury to Core Contributors to support the development and growth of the protocol.
 * Allocating assets from treasury to fund operational expenses for the protocol until financial sustainability is achieved.
 * Evaluating the efficacy of resource allocation and optimizing it over time.
 
-The Connext DAO is additionally responsible for electing and removing members of the Security Council, an operational multisig that can take critical actions on behalf of Connext such as vetoing DAO votes, performing routine upgrades, and pausing the protocol in the event of an emergency, until such time as the Security Council is no longer needed.
+The Connext DAO is additionally responsible for electing and removing members of the Security Council, an operational multisig that can take critical actions on behalf of Connext, such as vetoing DAO votes, performing routine upgrades, and pausing the protocol in the event of an emergency, until such time as the Security Council is no longer needed.
 
 ### Article 3: Ungovernance of the Connext Protocol
 
@@ -56,9 +56,9 @@ A further goal of the Connext DAO is long-term self-limitation through ungoverna
 
 The Connext DAO should aim to embody the key principles that guide the Connext vision and Collective:&#x20;
 
-* A Positive Sum Mindset: Connext is a public good that aims to push the entire web3 space forward. When evaluating proposals, the DAO should prioritize initiatives that optimize for value creation over extraction, and collaboration over unhealthy competition.
+* A Positive Sum Mindset: Connext is a public good that aims to push the entire web3 space forward. When evaluating proposals, the DAO should prioritize initiatives that optimize for value creation over extraction and collaboration over unhealthy competition.
 * Resiliency: Connext is foundational infrastructure for the future of the Internet. Trust-minimization, decentralization, and security are the means by which the protocol can ensure that it continues to operate fairly and securely decades into the future.
-* Data Orientation: Connext is ultimately an experiment in decentralized coordination around a shared public good. Data is our most powerful tool to determine whether this experiment is succeeding, and should be leveraged wherever possible by the DAO.
+* Data Orientation: Connext is ultimately an experiment in decentralized coordination around a shared public good. Data is our most powerful tool to determine whether this experiment is succeeding and should be leveraged wherever possible by the DAO.
 
 Openness, Transparency & Integrity: Connext is an open and accessible network that welcomes new ideas and perspectives, and operates with a high degree of transparency and integrity throughout its process. The DAO should work to uphold and embody these values wherever possible.
 
@@ -66,4 +66,12 @@ Openness, Transparency & Integrity: Connext is an open and accessible network th
 
 The working constitution will remain in effect until changed, with a mandatory review one year after DAO launch.
 
-Any proposed amendments to the constitution require a two-thirds majority vote with a minimum of 6% token participation to be passed.\
+Any proposed amendments to the constitution require a two-thirds majority vote with a minimum of 6% token participation to be passed.
+
+
+
+_DISCLAIMER_
+
+_This Constitution is solely for the purposes of aligning the mission and priorities of DAO members to expand and improve the Connext protocol to empower builders to create applications that are universally accessible from any chain, using any token, while maintaining the highest possible security. This is not a legally binding agreement and is not intended to create a partnership or any legal entity or relationship amongst the members of the DAO. The DAO is made up of a diffuse, disparate and decentralized group of tokenholders that will have different priorities and goals. And while this Constitution aims to align on certain fundamental aspects regarding the use of the protocol, ultimately, the constraints on the actions of the members of the DAO are solely those that are imposed technologically (or as otherwise required by law)._
+
+_Additionally, this is not an offering or solicitation of an offer to become a member of the DAO, to purchase tokens or to otherwise engage in an enterprise. The Connext Foundation makes no representation or warranty, express or implied as to the completeness or accuracy of the information herein or elsewhere presented related to the Connext DAO or to the functionality or long-term direction of the DAO._
