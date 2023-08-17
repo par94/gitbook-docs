@@ -43,7 +43,7 @@ Users earn 1pt for meeting the Mandatory Qualifiers and 1pt for each qualifier u
 
 _Users must qualify for at least one of the following two criteria in order to qualify for the NEXT airdrop_
 
-1. Transferred 5 or more times with an average value of at least $15 per transaction and a total volume exceeding $200.
+1. Transferred 5 or more times with an average value of at least $15 per transaction calculated across all transactions and a total volume exceeding $200.
 2. Provided at least $1,500 in liquidity to the Connext network for a minimum of 1 day.
 
 #### Stableswap LP Activity Qualifiers
