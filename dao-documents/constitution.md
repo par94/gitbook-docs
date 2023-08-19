@@ -56,11 +56,10 @@ A further goal of the Connext DAO is long-term self-limitation through ungoverna
 
 The Connext DAO should aim to embody the key principles that guide the Connext vision and Collective:&#x20;
 
-* A Positive Sum Mindset: Connext is a public good that aims to push the entire web3 space forward. When evaluating proposals, the DAO should prioritize initiatives that optimize for value creation over extraction and collaboration over unhealthy competition.
-* Resiliency: Connext is foundational infrastructure for the future of the Internet. Trust-minimization, decentralization, and security are the means by which the protocol can ensure that it continues to operate fairly and securely decades into the future.
-* Data Orientation: Connext is ultimately an experiment in decentralized coordination around a shared public good. Data is our most powerful tool to determine whether this experiment is succeeding and should be leveraged wherever possible by the DAO.
-
-Openness, Transparency & Integrity: Connext is an open and accessible network that welcomes new ideas and perspectives, and operates with a high degree of transparency and integrity throughout its process. The DAO should work to uphold and embody these values wherever possible.
+* **A Positive Sum Mindset**: Connext is a public good that aims to push the entire web3 space forward. When evaluating proposals, the DAO should prioritize initiatives that optimize for value creation over extraction and collaboration over unhealthy competition.
+* **Resiliency**: Connext is foundational infrastructure for the future of the Internet. Trust-minimization, decentralization, and security are the means by which the protocol can ensure that it continues to operate fairly and securely decades into the future.
+* **Data Orientation**: Connext is ultimately an experiment in decentralized coordination around a shared public good. Data is our most powerful tool to determine whether this experiment is succeeding and should be leveraged wherever possible by the DAO.
+* **Openness, Transparency & Integrity**: Connext is an open and accessible network that welcomes new ideas and perspectives, and operates with a high degree of transparency and integrity throughout its process. The DAO should work to uphold and embody these values wherever possible.
 
 ### Article 5: Amending this Constitution
 
