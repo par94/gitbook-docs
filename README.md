@@ -33,6 +33,13 @@ The NEXT airdrop will be conducted through a first-of-its-kind airdrop mechanism
 
 {% tabs %}
 {% tab title="Users" %}
+{% hint style="info" %}
+After carefully reviewing feedback, we found that certain categories of transactions were not being counted towards the airdrop as we originally intended.
+
+\
+To provide the best possible outcome, we adjusted the eligibility criteria on August 24, 2023. The total amount of NEXT that will be distributed during the airdrop was increased, ensuring that no pre-existing allocations are decreased.
+{% endhint %}
+
 A basic point system was used to determine the number of NEXT each recipient can claim. Our points criteria accounted for stableswap liquidity provision and bridge usage, with the most points awarded to users demonstrating consistent usage. In total, a maximum of 13 points were possible with both bridge and LP activity, and using partner projects or being a community advocate acted as a multiple on the accumulated points.
 
 ### User Qualifying Criteria
@@ -45,6 +52,10 @@ _Users must qualify for at least one of the following two criteria in order to q
 
 1. Transferred 5 or more times with an average value of at least $15 per transaction (calculated across all transactions) and a total volume exceeding $200.
 2. Provided at least $1,500 in liquidity to the Connext network for a minimum of 1 day.
+
+_Vector usage will be included towards your points if_
+
+1. Users interacted with NXTP (deployed November 2021) at least once via bridging or LPing.
 
 #### Stableswap LP Activity Qualifiers
 
@@ -75,8 +86,7 @@ _Users must qualify for at least one of the following two criteria in order to q
 
 #### Multipliers
 
-1. Community advocate (2-3x Multiplier)
-2. Utilized a partner protocol (1.5x Multiplier)
+1. Utilized a partner protocol (1.5x Multiplier)
 {% endtab %}
 
 {% tab title="Routers" %}
@@ -102,6 +112,21 @@ A basic point system was used to determine the number of NEXT each router has ea
 
 1. Impacted by nomad hack (1.5x multiplier).
 2. Contributing router operators (3x multiplier).
+{% endtab %}
+
+{% tab title="Community Advocates" %}
+A basic point system was used to determine the number of NEXT each CA / CL earned. Our points criteria focused on quality and duration of contributions
+
+### Community Advocate Qualifying Criteria
+
+#### Mandatory Qualifiers
+
+* Must be an active leader in the Connext community as recognized by the team.
+
+#### Community Advocate Activity Qualifiers
+
+* Number of months of support
+* Quality of contributions
 {% endtab %}
 {% endtabs %}
 

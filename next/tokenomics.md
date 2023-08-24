@@ -15,10 +15,14 @@ The Community category can be further subdivided into:
 | Category           | % of total supply | Number of NEXT |
 | ------------------ | ----------------- | -------------- |
 | DAO                | 30%               | 300,000,000    |
-| Connext Foundation | 10.8%             | 108,000,000    |
-| Airdrop            | 10%               | 100,000,000    |
+| Connext Foundation | 10.1%             | 101,000,000    |
+| Airdrop            | 10.7%             | 107,000,000    |
 
 <figure><img src="../.gitbook/assets/2023-08-17 07.06.27 (1).jpg" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+After carefully reviewing feedback, we found that certain categories of transactions were not being counted towards the airdrop as we originally intended. To provide the best possible outcome, we adjusted the eligibility criteria on August 24, 2023.
+{% endhint %}
 
 ## Supply Schedule
 
@@ -27,6 +31,6 @@ Allocations of NEXT to the following categories of recipients are subject to a l
 * Early Backers
 * Ecosystem & Strategic Backers
 * Early Team & Advisors
-* 50% of tokens allocated to Routers as part of the Airdrop (2% of the total supply)
+* 50% of tokens allocated to Routers and Community Advocates as part of the Airdrop (2.15% of the total supply)
 
 The lockup period consists of a 1-year lockup followed by a **linear release**. In other words, 1/13 of the tokens will be released on September 5th, 2024, and remaining tokens will unlock in equal monthly 1/13 allotments until all tokens are fully unlocked (24 months after the NEXT Airdrop).
