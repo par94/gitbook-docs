@@ -14,8 +14,8 @@ The Community category can be further subdivided into:
 
 | Category           | % of total supply | Number of NEXT |
 | ------------------ | ----------------- | -------------- |
-| DAO                | 30%               | 300,000,000    |
-| Connext Foundation | 10.1%             | 101,000,000    |
+| DAO                | 27.3%             | 273,000,000    |
+| Connext Foundation | 10.5%             | 105,000,000    |
 | Airdrop            | 10.7%             | 107,000,000    |
 
 <figure><img src="../.gitbook/assets/2023-08-17 07.06.27 (1).jpg" alt=""><figcaption></figcaption></figure>
