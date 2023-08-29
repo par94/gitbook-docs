@@ -3,7 +3,7 @@
 The steps to set up your Connext xERC20 are very straightforward:
 
 1. Choose a Home chain for your tokens (whatever chain your token is already deployed to!)
-2. Deploy [Mintable/Burnable Token](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20) representations on the other chains you want to support.
+2. Deploy [Mintable/Burnable](https://github.com/defi-wonderland/xTokens) Token representations on the other chains you want to support.
 3. Send your token addresses to the Connext Labs team to [register your token in our system](https://github.com/connext/monorepo/blob/75970ab3dc8c2e447c0099ef2d5fac2677749496/packages/deployments/contracts/contracts/core/connext/facets/TokenFacet.sol#L274).
 4. Give the Connext contracts rights to mint your token.
 5. Work with the team to signal to Connext routers to supply fast-liquidity for your token.
