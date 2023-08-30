@@ -59,9 +59,9 @@ _Vector usage will be included towards your points if_
 
 #### Stableswap LP Activity Qualifiers
 
-1. Provided liquidity for at least 25 stableswap transactions.
-2. Provided liquidity for at least 50 stableswap transactions.
-3. Provided liquidity for at least 100 stableswap transactions.
+1. Interacted with stableswap pools at least 25 times.
+2. Interacted with stableswap pools at least 50 times.
+3. Interacted with stableswap pools at least 100 times.
 4. Provided at least $3,000 in liquidity (2 pts).
 5. Provided at least $6,000 in liquidity (2 pts).
 6. Provided at least $9,000 in liquidity (2 pts).
