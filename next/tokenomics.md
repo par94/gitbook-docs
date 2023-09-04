@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Tokenomics
 
 {% hint style="warning" %}
@@ -8,17 +22,13 @@ This document is currently subject to public review before being finalized. If y
 
 The high-level allocations of NEXT are as follows:
 
-<table><thead><tr><th width="305">Category</th><th width="199">% of total supply</th><th>Number of NEXT</th></tr></thead><tbody><tr><td>Community</td><td>50.84%</td><td>508,429,000</td></tr><tr><td>Early Backers</td><td>22.34%</td><td>223,435,000</td></tr><tr><td>Ecosystem &#x26; Strategic Backers</td><td>11.24%</td><td>112,352,000</td></tr><tr><td>Early Team &#x26; Advisors</td><td>11.68%</td><td>116,786,000</td></tr><tr><td>Proxima Labs</td><td>3.90%</td><td>38,999,000</td></tr></tbody></table>
+<table><thead><tr><th width="291">Category</th><th width="172">% of total supply</th><th>Number of NEXT</th></tr></thead><tbody><tr><td>Community</td><td>50.94%</td><td>509,428,750</td></tr><tr><td>Early Backers</td><td>22.43%</td><td>224,338,119</td></tr><tr><td>Ecosystem &#x26; Strategic Backers</td><td>11.24%</td><td>112,352,000</td></tr><tr><td>Early Team &#x26; Advisors</td><td>11.61%</td><td>116,097,420</td></tr><tr><td>Proxima Labs</td><td>3.78%</td><td>37,783,010</td></tr></tbody></table>
 
 The Community category can be further subdivided into:
 
-| Category           | % of total supply | Number of NEXT |
-| ------------------ | ----------------- | -------------- |
-| DAO                | 29.3%             | 293,000,000    |
-| Connext Foundation | 10.8%             | 108,000,000    |
-| Airdrop            | 10.7%             | 107,000,000    |
+<table><thead><tr><th>Category</th><th width="231.33333333333331">% of total supply</th><th>Number of NEXT</th></tr></thead><tbody><tr><td>DAO</td><td>29.44%</td><td>294,350,509</td></tr><tr><td>Connext Foundation</td><td>10.94%</td><td>109,446,745</td></tr><tr><td>Airdrop</td><td>10.56%</td><td>105,631,496.18</td></tr></tbody></table>
 
-<figure><img src="../.gitbook/assets/NEXT Token Allocation (2).jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/NEXT Token Allocation_Corrected.jpeg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 After carefully reviewing feedback, we found that certain categories of transactions were not being counted towards the airdrop as we originally intended. To provide the best possible outcome, we adjusted the eligibility criteria on August 24, 2023.
