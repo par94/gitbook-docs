@@ -43,8 +43,7 @@ Any DAO member may declare their candidacy for the Security Council. To be consi
 
 Elected Special Council members are expected to:
 
-* Provide emergency contact information&#x20;
-* Set up emergency response application
+* Provide emergency contact where they can be reached in case of emergency
 * Possess the mandatory skills necessary to act in this role, such as knowledge of best security practices, use of hardware wallet, ability to review and sign transactions, etc.
 
 ***
