@@ -45,7 +45,7 @@ Elected Special Council members are expected to:
 
 * Provide emergency contact information&#x20;
 * Set up emergency response application
-* Have the mandarory skills necessary to act in this role, such as knowledge of best security practices, use of hardware wallet, ability to review and sign transactions, etc.
+* Possess the mandatory skills necessary to act in this role, such as knowledge of best security practices, use of hardware wallet, ability to review and sign transactions, etc.
 
 ***
 
