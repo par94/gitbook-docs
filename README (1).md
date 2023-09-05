@@ -25,7 +25,7 @@ The NEXT airdrop will be conducted through a first-of-its-kind airdrop mechanism
 
 ### NEXT Details
 
-<table><thead><tr><th width="231"></th><th>Details</th></tr></thead><tbody><tr><td>Total supply</td><td>1,000,000,000</td></tr><tr><td>Token type</td><td>xERC20</td></tr><tr><td>Token address</td><td><a href="https://etherscan.io/address/0xFE67A4450907459c3e1FFf623aA927dD4e28c67a">0xFE67A4450907459c3e1FFf623aA927dD4e28c67a</a></td></tr><tr><td>Claimable chains</td><td>Arbitrum, Optimism, Polygon, and Gnosis Chain</td></tr><tr><td>Snapshot date</td><td>August 1, 2023 at 00:00 UTC<br>Timestamp: 1690848000</td></tr><tr><td>Claiming begins</td><td>September 05, 2023 at 13:00 UTC<br>Timestamp: 1693940400</td></tr><tr><td>Claiming ends</td><td>March 05, 2024 at 13:00 UTC<br>Timestamp: 1709668800</td></tr></tbody></table>
+<table><thead><tr><th width="231"></th><th>Details</th></tr></thead><tbody><tr><td>Total supply</td><td>1,000,000,000</td></tr><tr><td>Token type</td><td>xERC20</td></tr><tr><td>Token address</td><td><a href="https://etherscan.io/address/0xFE67A4450907459c3e1FFf623aA927dD4e28c67a">0xFE67A4450907459c3e1FFf623aA927dD4e28c67a</a></td></tr><tr><td>Claimable chains</td><td>Arbitrum, Optimism, Polygon, and Gnosis Chain</td></tr><tr><td>Snapshot date</td><td>August 1, 2023 at 00:00 UTC<br>Timestamp: 1690848000</td></tr><tr><td>Claiming begins</td><td>September 05, 2023 at 13:00 UTC<br>Timestamp: 1693918800</td></tr><tr><td>Claiming ends</td><td>March 05, 2024 at 13:00 UTC<br>Timestamp: 1714914000</td></tr></tbody></table>
 
 ***
 
