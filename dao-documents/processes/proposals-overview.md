@@ -23,11 +23,11 @@ This document is currently subject to public review before being finalized. If y
 There are three main types of governance proposals you can make:
 
 1. **Executable Proposal:** \
-   This is a proposal for a series of smart contract operations to be executed by accounts the DAO controls. These can include transfers of tokens as well as arbitrary smart contract calls. Examples of this include allocating funding to a workstream multisig wallet, or upgrading Connext core contract. Executable proposals have a quorum requirement of 4% (24 million) NEXT tokens and require a minimum approval of 50% to pass.
+   This is a proposal for a series of smart contract operations to be executed by accounts the DAO controls. These can include transfers of tokens as well as arbitrary smart contract calls. Examples of this include allocating funding to a workstream multisig wallet, or upgrading Connext core contract. Executable proposals have a quorum requirement of 15 million NEXT tokens and require a minimum approval of 50% to pass.
 2. **Social Proposal:** \
-   This proposal seeks the consensus of the DAO members on a matter that cannot be implemented or enforced via on-chain mechanisms. Social proposals have a quorum requirement of 4% (24 million) NEXT tokens and require a minimum approval of 50% to pass.
+   This proposal seeks the consensus of the DAO members on a matter that cannot be implemented or enforced via on-chain mechanisms. Social proposals have a quorum requirement of 15 million NEXT tokens and require a minimum approval of 50% to pass.
 3. **Constitutional Amendment:** \
-   This is a social proposal that asks the DAO to amend the constitution. Draft proposal should include the exact changes proposed to be made to the constitution. Quorum of 6% (36 million) is currently required and a minimum approval of two thirds to pass.
+   This is a social proposal that asks the DAO to amend the constitution. Draft proposal should include the exact changes proposed to be made to the constitution. Quorum of 36 million is currently required and a minimum approval of two thirds to pass.
 
 ***
 
@@ -78,7 +78,7 @@ _The proposal in this phase should include the following sections:_ [_Proposal S
    * **Social Proposal or Constitutional Amendment:** \
      Navigate to Snapshot and schedule the proposal for a snapshot vote. If the snapshot vote passes, the proposal is passed and you are done!
    * **Executable Proposal:**\
-     Generate the transaction using the Connext Zodiac module. If the transaction is not cross-chain, the SAFE transaction builder can be used to generate the executable data. Submit the proposal to a vote via Snapshot transaction builder. Votes last for 3 days, are delayed by 4 days after creation, and include “For”, “Abstain”, and “Against” as the voting options. If the proposal passes, anyone can request execution via Snapshot UI. Requesters must post a 5 WETH bond and there is a 3-day delay. Once the delay elapses, anyone can execute the proposal via Snapshot which will return the bond to the requester and execute on-chain transaction.
+     Generate the transaction using the Connext Zodiac module. If the transaction is not cross-chain, the SAFE transaction builder can be used to generate the executable data. Submit the proposal to a vote via Snapshot transaction builder. Votes are delayed by 2 days, voting last for 3 days, and “For”, “Abstain”, and “Against” are the voting options. If the proposal passes, anyone can request execution via Snapshot UI. Requesters must post a 5 WETH bond and there is a 3-day delay. Once the delay elapses, anyone can execute the proposal via Snapshot which will return the bond to the requester and execute on-chain transaction.
 
 {% hint style="info" %}
 **Note**: SAFE admins retain authority to delete proposals and submit their own multisig transactions, serving as a security council with veto power on community votes. More information about the Security Council is available [here](https://docs.connext.network/v/dao-documentation/collective/security-council).
