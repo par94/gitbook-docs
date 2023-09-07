@@ -59,7 +59,11 @@ _A second separate governance forum post outlining the proposal in detail and in
 * At the end of 5 days, whichever option has the majority of votes wins, and can be included in a governance proposal for Stage 3. If the option to make no change wins, the topic should be closed by community moderators.
 
 {% hint style="info" %}
-**Note**: If authors make significant changes to the proposal based on feedback, they can decide to submit a new version to the Temperature Check. They need to create a new Snapshot poll and create a new topic on forum named “Temperature Check V2 — \[Your Title Here]“. They are required to link all previous votes and discussions to the new topic.
+**Notes**: If authors make significant changes to the proposal based on feedback, they can decide to submit a new version to the Temperature Check. They need to create a new Snapshot poll and create a new topic on forum named “Temperature Check V2 — \[Your Title Here]“. They are required to link all previous votes and discussions to the new topic.
+{% endhint %}
+
+{% hint style="info" %}
+**Additional Note:** Early proposals that aim to establish documents and processes essential to the functioning of the DAO can skip the temperature check phase, and advance to the formal vote instead.
 {% endhint %}
 
 ### **Phase 3: Formal Vote**
