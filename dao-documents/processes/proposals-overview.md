@@ -69,7 +69,7 @@ _The proposal in this phase should include the following sections:_ [_Proposal S
 
 #### To Create a Formal Vote:
 
-1. Create a topic in the Proposal Discussion category on forum titled “Formal Vote \[Social/Constitutional/Executable \[Proposal Number]] — \[Your Title Here]” and link to any relevant Snapshot polls/discussion threads. Proposal numbers should be in a “CIP#” format. Topics that begin with “Formal Vote” that have not successfully passed the Temperature Check and Request for Comment stages should be removed by community moderators.
+1. Create a topic in the Proposal Discussion category on forum titled “Formal Vote \[Social/Constitutional/Executable \[Proposal Number]] — \[Your Title Here]” and link to any relevant Snapshot polls/discussion threads. Proposal numbers should be in a “CGP#” format. Topics that begin with “Formal Vote” that have not successfully passed the Temperature Check and Request for Comment stages should be removed by community moderators.
 2. Ensure at least 600,000 NEXT is delegated to your address in order to submit a proposal, or find a delegate who has enough delegated NEXT to meet the proposal threshold and propose on your behalf.
    * **Social Proposal or Constitutional Amendment:** \
      Navigate to Snapshot and schedule the proposal for a snapshot vote. If the snapshot vote passes, the proposal is passed and you are done!
