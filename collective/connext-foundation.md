@@ -20,7 +20,7 @@ This document is currently subject to public review before being finalized. If y
 
 The Connext Foundation is a Cayman Islands foundation company dedicated to supporting the Connext ecosystem.&#x20;
 
-### What does the Connext Foundation Do?
+### What does the Connext Foundation do?
 
 The Connext Foundation, a shareholderless legal entity that is, by its constitutional documents, mission aligned with the Connext ecosystem, takes any actions that it feels will benefit the Connext ecosystem. These may include:
 
