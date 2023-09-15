@@ -22,6 +22,6 @@ The following series of documents outlines:
 
 * [Proposal and Voting Mechanisms](proposal-and-voting-mechanisms.md)
 * [Passing a Proposal](proposals-overview.md)
-* [Proposal Structure Guidelines](proposal-structure-guidelines.md)
+* [Proposal Structure Guidelines](connext-governance-proposal-template.md)
 * [How-to Guides](../how-to-guides/)
 * [Security Council Election Processes](security-council-election-process.md)

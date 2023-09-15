@@ -22,13 +22,13 @@ This is a suggested process for developing and advancing Connext Improvement Pro
 
 1. [**Connext Forum**](https://forum.connext.network/)**:**\
    Forum is used for governance-related discussions. Community members must register for an account before sharing or liking posts.
-2. **Snapshot:**\
-   Snapshot is a voting interface used for delegating votes, and creating and voting on proposals.
+2. [**Snapshot**](https://dao.connext.network/)**:**\
+   Snapshot is a voting interface used for delegating votes and creating and voting on proposals.
 3. **Crosschain Governance:**\
    In line with the Connext DAO vision to empower builders to create applications that are universally accessible **from any chain, using any token,** Connext supports voting and delegation across multiple chains as well as cross-chain proposal execution.
 
 {% hint style="info" %}
-Note: In conjunction with the Zodiac team, Connext and DeFi Wonderland have created a cross-chain widget that plugs into SAFEs to facilitate proposal execution. This tooling allows users to generate cross-chain payload directly from their SAFE. \
+Note: In conjunction with the Zodiac team, Connext, and DeFi Wonderland have created a cross-chain widget that plugs into SAFEs to facilitate proposal execution. This tooling allows users to generate cross-chain payload directly from their SAFE. \
 \
 More information about the Zodiac Connext module is available [**here**](https://blog.connext.network/crosschain-governance-a-new-integration-connext-x-zodiac-gnosis-guild-5cf119a6cf2e).
 {% endhint %}

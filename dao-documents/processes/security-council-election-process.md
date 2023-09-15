@@ -20,11 +20,15 @@ This document is currently subject to public review before being finalized. If y
 
 Elections for the Security Council are held annually, excluding an initial 6-month bootstrapping phase, during which the Connext Foundation will appoint the initial council.
 
-Before each election cycle, the Connext DAO will open a one-month-long call for candidates, followed by a 5-day long voting period. The top 12 candidates will then be inducted into the council for one term that will last for 12 months. Serving multiple terms will be possible, however it will require candidates to submit a new application, and be elected into the Security Council through a formal vote.
+Before each election cycle, the Connext DAO will open a one-month-long call for candidates, followed by a 5-day long voting period. The top 12 candidates will then be inducted into the council for one term that will last for 12 months. Serving multiple terms will be possible, however, it will require candidates to submit a new application and be elected into the Security Council through a formal vote.
 
-NEXT token holders can vote for Security Council or delegate their voting power so that the representative of their choice can vote on their behalf. Voting power depends on the number of tokes delegated to an address and is such that 1 token represents 1 vote.
+NEXT token holders can vote for the Security Council or delegate their voting power so that the representative of their choice can vote on their behalf. Voting power depends on the number of tokes delegated to an address and is such that 1 token represents 1 vote.
 
 Changes to these elections may be proposed by the DAO, but not in an ongoing election cycle.
+
+{% hint style="info" %}
+Note: Prior to the first election, the DAO can post an RFC to discuss whether the term duration should be 6 or 12 months.
+{% endhint %}
 
 ***
 
@@ -50,7 +54,7 @@ Elected Special Council members are expected to:
 
 ## Connext Security Council - Template & Introductions
 
-Interested individuals are encouraged to use the following template as part of their application to become a part of Connext Security Council.
+Interested individuals are encouraged to use the following template as part of their application to become a part of the Connext Security Council.
 
 **Instructions**:
 
@@ -76,3 +80,22 @@ Please note that you must adhere to the template. Any responses that deviate fro
 **Connext DAO Vision & Goals**
 
 \[Please share your vision for the Connext DAO and what the goals of the DAO should look like.]
+
+***
+
+## Current Security Council
+
+| Name    | Affiliation        |
+| ------- | ------------------ |
+| Layne   | Connext Labs       |
+| Robert  | Connext Foundation |
+| Rahul   | Connext Labs       |
+| Goncalo | Creed              |
+| Greg    | Chainsafe          |
+| Dina    | P2P                |
+| Auryn   | Gnosis Guild       |
+| Veil    | Veil               |
+| Hilmar  | Gelato             |
+| Stefan  | Connext Community  |
+| Matias  | Wonderland         |
+| Anurag  | Polygon            |

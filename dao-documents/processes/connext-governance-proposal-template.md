@@ -12,13 +12,15 @@ layout:
     visible: true
 ---
 
-# Proposal Structure Guidelines
+# Connext Governance Proposal Template
 
 {% hint style="warning" %}
 This document is currently subject to public review before being finalized. If you notice a revision that needs to be made or have feedback, please [request a revision](https://github.com/connext/gitbook-docs/issues/new) or start a conversation with us on Discord at [https://discord.gg/connext](https://discord.gg/connext).
 {% endhint %}
 
-Proposers are encouraged to include the following sections within Connext Governance Proposals:
+This is a Connext Governance Proposal Template. Proposers are required to copy and include the following sections within Connext Governance Proposals:
+
+**“\[Social/Constitutional/Executable \[CGP#]] — \[Your Title Here]”**
 
 * **Abstract** - Abstract is a multi-sentence (short paragraph) summary. This should be a very short and human-readable version of the specification section. Someone should be able to read only the abstract to understand what the proposal does.
 * **Motivation** - A statement on why the community should implement the CGP.
