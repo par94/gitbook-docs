@@ -87,7 +87,7 @@ Please note that you must adhere to the template. Any responses that deviate fro
 
 | Name    | Affiliation        |
 | ------- | ------------------ |
-| Layne   | Connext Labs       |
+| Layne   | Proxima Labs       |
 | Robert  | Connext Foundation |
 | Rahul   | Connext Labs       |
 | Goncalo | Creed              |
