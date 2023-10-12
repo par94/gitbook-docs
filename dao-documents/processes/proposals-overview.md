@@ -43,44 +43,33 @@ _A governance forum post providing a description of a proposal._
 * Reach out to your network to build support for the proposal. Discuss the proposal and solicit delegates to provide feedback on it. Be willing to respond to questions and comments. Share your viewpoint, but try to remain impartial.
 
 {% hint style="info" %}
-**Note**: The length of this phase should be correlated to the complexity of the proposal and allow for meaningful feedback. It’s in the proposal author’s interest to get as much feedback from the community as possible at this stage.
-{% endhint %}
-
-### **Phase 2: Temperature check**
-
-_A second separate governance forum post outlining the proposal in detail and incorporating any feedback from phase 1. The post should be accompanied by a Snapshot poll. The Snapshot poll runs for 5 days and is decided by a majority._
-
-#### To Create a Temperature Check:
-
-* Use feedback from Phase 1 and create a new Snapshot poll that covers the options that have gained support. Set the poll duration to 5 days. Ensure at least 50,000 NEXT is delegated to your address or find a delegate who has enough delegated NEXT to meet the threshold.
-* Create a new topic in the Proposal Discussion category on the forum titled: \
-  **“Temperature Check — \[Your Title Here]“**.&#x20;
-  * This will alert the community that this topic is ready to move to an off-chain signaling vote and solicit participation. Any topics beginning with Temperature Check that have not started with a Request for Comment should be removed by community moderators. Make sure that the discussion thread links to the new Snapshot poll and the Request for Comment thread.
-* At the end of 5 days, whichever option has the majority of votes wins, and can be included in a governance proposal for Stage 3. If the option to make no change wins, the topic should be closed by community moderators.
-
-{% hint style="info" %}
-**Notes**: If authors make significant changes to the proposal based on feedback, they can decide to submit a new version to the Temperature Check. They need to create a new Snapshot poll and create a new topic on the forum named “Temperature Check V2 — \[Your Title Here]“. They are required to link all previous votes and discussions to the new topic.
+**Note**: The length of this phase is limited to 7 days. It’s in the proposal author’s interest to get as much feedback from the community as possible in this limited period of time.
 {% endhint %}
 
 {% hint style="info" %}
-**Additional Note:** Early proposals that aim to establish documents and processes essential to the functioning of the DAO can skip the temperature check phase, and advance to the formal vote instead.
+**Temperature Check:** Temperature check was removed from the process based on [Formal Vote - Social CGP1 - Voting Duration](https://snapshot.org/#/dao.connext.eth/proposal/0x77125238d344e5e378387d048d6e3b2c2a45bf3d3d2b6c22b1b76c443e4e9301).
 {% endhint %}
 
-### **Phase 3: Formal Vote**
+### **Phase 2: Formal Vote**
 
 _A final governance forum post incorporating any feedback from the Temperature Check phase._\
 _The proposal in this phase should include the following sections:_ [_Connext Governance Proposal Template_](https://app.gitbook.com/o/5e3LmvXsgxY4Ysqtad89/s/yvLdyGupc5aMaHVTGRuy/\~/changes/21/dao-documents/processes/connext-governance-proposal-template)
 
 #### To Create a Formal Vote:
 
-1. Create a topic in the Proposal Discussion category on the forum titled “Formal Vote \[Social/Constitutional/Executable \[Proposal Number]] — \[Your Title Here]” and link to any relevant Snapshot polls/discussion threads. Proposal numbers should be in a “CGP#” format. Topics that begin with “Formal Vote” that have not successfully passed the Temperature Check and Request for Comment stages should be removed by community moderators.
+1. Create a topic in the Proposal Discussion category on the forum titled “Formal Vote \[Social/Constitutional/Executable \[Proposal Number]] — \[Your Title Here]” and link to any relevant Snapshot polls/discussion threads. Proposal numbers should be in a “CGP#” format. Topics that begin with “Formal Vote” that have not successfully passed Request for Comment stages should be removed by community moderators.
 2. Ensure at least 600,000 NEXT is delegated to your address in order to submit a proposal or find a delegate who has enough delegated NEXT to meet the proposal threshold and propose on your behalf.
    * **Social Proposal or Constitutional Amendment:** \
-     Navigate to Snapshot and schedule the proposal for a snapshot vote. If the snapshot vote passes, the proposal is passed, and you are done!
+     Navigate to Snapshot and schedule the proposal for a snapshot vote. Votes are delayed by 2 days, and voting lasts for 7 days. If the snapshot vote passes, the proposal is passed, and you are done!
    * **Executable Proposal:**\
-     Generate the transaction using the Connext Zodiac module. If the transaction is not cross-chain, the SAFE transaction builder can be used to generate the executable data. Submit the proposal to a vote via Snapshot transaction builder. Votes are delayed by 2 days, voting lasts for 3 days, and “For,” “Abstain,” and “Against” are the voting options. If the proposal passes, anyone can request execution via Snapshot UI. Requesters must post a 5 WETH bond, and there is a 3-day delay. Once the delay elapses, anyone can execute the proposal via Snapshot, which will return the bond to the requester and execute on-chain transaction.
+     Generate the transaction using the Connext Zodiac module. If the transaction is not cross-chain, the SAFE transaction builder can be used to generate the executable data. Submit the proposal to a vote via Snapshot transaction builder. Votes are delayed by 2 days, voting lasts for 7 days, and “For,” “Abstain,” and “Against” are the voting options. If the proposal passes, anyone can request execution via Snapshot UI. Requesters must post a 5 WETH bond, and there is a 3-day delay. Once the delay elapses, anyone can execute the proposal via Snapshot, which will return the bond to the requester and execute on-chain transaction.
 
 {% hint style="info" %}
 **Note**: SAFE admins retain authority to delete proposals and submit their own multisig transactions, serving as a security council with veto power on community votes. \
 More information about the Security Council is available [here](https://docs.connext.network/v/dao-documentation/collective/security-council).
 {% endhint %}
+
+{% hint style="info" %}
+**Note:** Voting Duration was changed to 7 days + delays, based on [Formal Vote - Social CGP1 - Voting Duration](https://snapshot.org/#/dao.connext.eth/proposal/0x77125238d344e5e378387d048d6e3b2c2a45bf3d3d2b6c22b1b76c443e4e9301).
+{% endhint %}
+
