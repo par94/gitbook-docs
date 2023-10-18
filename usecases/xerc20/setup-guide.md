@@ -1,88 +1,142 @@
 # Setup Guide
 
-Hello! 👋 This document will guide you through the process of setting up your xERC20 token with Connext.
+Hello! 👋 This document will guide you through the process of setting up your `xERC20` token with Connext.
 
 ## Prerequisites
 
-Let’s assume the following information about your token before we begin:
+Let's begin by getting a comprehensive understanding of the steps to follow based on your token's current situation.
 
-1. Your token is already deployed to a “home” chain. The implementation here doesn’t matter.
-2. If your token is deployed to other chains, it has a owner-controlled mint/burn interface or is upgradeable.
+#### 1. Categorize your token
 
-## Deploying Token Representations
+Determine which of the following categories best describes your token's current state.
+
+* **Category A**: The token is new and is not deployed anywhere.
+* **Category B**: The token already exists on one chain.
+* **Category C**: The token already exists on multiple chains.
+
+#### 2. Define your token's "home" chain
+
+Based on your token's category:
+
+* **Category A**: Choose one chain to be the home chain.&#x20;
+* **Category B**: The chain where your token is currently deployed will be the home chain.&#x20;
+* **Category C**: Choose one chain (among the ones your token is currently deployed) to be the home chain.
+
+#### 3. Prepare to deploy tokens
+
+* **Category A**:
+  * You will deploy an `xERC20` on each chain you wish to support, including the home chain.
+* **Category B** and **Category C**:
+  * On each chain with an existing token, you need to figure out if a Lockbox setup is needed (next section).
+  * You will deploy an `xERC20` to all other chains you wish to support.
+
+## Lockbox Setup
+
+A Lockbox allows any existing ERC20 to become compatible with the ERC-7281 (xERC20) standard. The Lockbox is just a simple wrapper contract, analogous to Wrapped ETH.
+
+For **Category B** and **Category C**, there are tokens that already exist on certain chains. For each of these tokens, follow this flowchart to determine if you need to have a Lockbox setup on that token's chain.
+
+<figure><img src="../../.gitbook/assets/xERC20_flowchart.png" alt=""><figcaption></figcaption></figure>
+
+#### Example: NEXT token
+
+To better understand how a Lockbox setup operates, consider the `NEXT` token as a real-world example.
+
+* On Ethereum: Both the `NEXT` token and `xNEXT` token are deployed with a `Lockbox`.
+* On Arbitrum: Only the `xNEXT` token is deployed.
+
+Bridging from Ethereum to Arbitrum:
+
+* \[Ethereum] User deposits `NEXT` into the Lockbox and receives `xNEXT`
+* \[Ethereum] User calls the bridge using `xNEXT`&#x20;
+* \[Arbitrum] Bridge delivers `xNEXT` to the user
+
+Bridging from Arbitrum to Ethereum:
+
+* \[Arbitrum] User calls the bridge using `xNEXT`
+* \[Ethereum] Bridge withdraws `NEXT` from the Lockbox using the bridged `xNEXT`
+* \[Ethereum] Bridge delivers `NEXT` to the user
+
+## Deploying Contracts
 
 {% hint style="info" %}
-💡 The below sections specifically focus on testnet deployment. See [Mainnet Deployment](setup-guide.md#mainnet-deployment) for mainnet-specific information.
+The [ERC-7281](https://github.com/ethereum/EIPs/pull/7281) specification requires compliant tokens to implement the ERC-20 interface along with some additional rate limit interfaces.
 {% endhint %}
 
-The first thing you will need to do is deploy a representation of your token to each chain that you want to support with the following properties:
+Now that you have an idea of how your tokens should be set up, let's move on to the actual deployment procedures.&#x20;
 
-* MUST support a standard mint/burn interface.
-* MUST give Connext’s contracts the rights to mint/burn the token.
-* SHOULD be an upgradeable implementation so you can mi}grate to the full xERC20 standard in the future (which supports fungibility with canonical bridges).
+#### xERC20s and Lockboxes
 
-## Getting Allowlisted
+Connext provides an [xERC20 Github repository](https://github.com/connext/xERC20) that contains implementations of `xERC20`, `Lockbox`, and scripts to deploy them. We suggest you deploy from a fork of this repo. See the `README` for instructions. You will configure the scripts based on which chains you need to have Lockbox setups.
 
-After deployment, your token representations need to be allowlisted in Connext before the protocol can know to mint/burn them across chains. This process involves submitting two PRs:
+#### LockboxAdapter
+
+You might have noticed there's a `LockBoxAdapter` contract as well in the diagram above when you have a Lockbox setup. This contract facilitates the unwrapping of `xERC20 -> ERC20` on the destination chain. This way, bridge UIs can deliver the asset that the user expects to get on the Lockbox chain.
+
+You can deploy a simple Lockbox adapter like [this one](https://github.com/connext/chain-abstraction-integration/blob/next-lockbox-adapter/contracts/integration/Connext/NextLockboxAdapter.sol).
+
+#### Whitelisting bridges
+
+As the token issuer, you have the power to decide which bridges can mint/burn your token and the ability to set rate limits for per bridge:
+
+```
+/**
+ * @notice Updates the limits of any bridge
+ * @dev Can only be called by the owner
+ * @param _mintingLimit The updated minting limit we are setting to the bridge
+ * @param _burningLimit The updated burning limit we are setting to the bridge
+ * @param _bridge The address of the bridge we are setting the limits too
+ */
+function setLimits(address _bridge, uint256 _mintingLimit, uint256 _burningLimit) external;
+```
+
+These limits will replenish after`_DURATION` (by default the repo deploys `xERC20` with a value of 1 day).
+
+Once your token is deployed to all the chains and assuming you want Connext to be able to bridge your token, please whitelist Connext by calling `setLimits`. You can find all Connext contract addresses in [Deployments](../../resources/deployments.md).
+
+## Getting Allowlisted For Connext
+
+Your tokens need to be allowlisted in Connext before the protocol can know to mint/burn them across chains. This process involves submitting two PRs:
 
 1.  The first PR must be submitted to our [ChainData mappings](https://github.com/connext/chaindata/blob/main/crossChain.json).
 
     * For each chain in the mappings that your token is deployed to, add an object that looks like the following, keyed by your token address. Note that the `mainnetEquivalent` field refers to your asset’s address on Ethereum L1 - this is used to retrieve oracle pricing data in the cases where it is relevant. If your token is not deployed to Ethereum L1, feel free to leave this field blank.
 
     ```json
-    "0xc234A67a4F840E61adE794be47de455361b52413": {
-        "name": "Dai Stablecoin",
-        "symbol": "DAI",
-        "mainnetEquivalent": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-        "decimals": 18
-    },
+    "0x4c781E4D22cfaAdA520cAe4aF9097C5ecf9C3A71": {
+      "name": "xDappRadar",
+      "symbol": "xRADAR",
+      "mainnetEquivalent": "0x44709a920fccf795fbc57baa433cc3dd53c44dbe",
+      "decimals": 18
+    }
     ```
 2.  The second PR must be submitted to [our allowlisting scripts](https://github.com/connext/monorepo/blob/main/packages/deployments/contracts/src/cli/init/config/testnet/production.ts).
 
     * Each representation is indexed by domain (a Connext-specific identifier per chain that exists for forward compatibility with non-evm chains). [You can find a list of domains here](broken-reference).
+    * Under `canonical,` the domain must be set to `11111` and the `address` used here should be your home chain's `xERC20`. It will be used again under `representations`.
+    * For example, `RADAR`'s home chain is Ethereum and its `xERC20` token is configured under `representations`in Ethereum's domain ID `6648936`. It is also set under `canonical` in the domain ID `11111`.
 
     ```json
     {
-      name: "WMATIC",
+      name: "RADAR",
       canonical: {
-        domain: "9991",
-        address: "0x9c3c9283d3e44854697cd22d3faa240cfb032889",
+        domain: "11111",
+        address: "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
         decimals: 18,
       },
       representations: {
-        "1735356532": {
-          local: "0x0000000000000000000000000000000000000000",
-          adopted: "0x0000000000000000000000000000000000000000",
+        /// ETHEREUM
+        "6648936": {
+          local: "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
+          adopted: "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
         },
-        "1735353714": {
-          local: "0x0000000000000000000000000000000000000000",
-          adopted: "0x0000000000000000000000000000000000000000",
-        },
-        "9991": {
-          local: "0x0000000000000000000000000000000000000000",
-          adopted: "0x0000000000000000000000000000000000000000",
-        },
-        /// ARBITRUM-GOERLI
-        "1734439522": {
-          local: "0x0000000000000000000000000000000000000000",
-          adopted: "0x0000000000000000000000000000000000000000",
-        },
-        /// ZKSYNC-TEST
-        "2053862260": {
-          local: "0x0000000000000000000000000000000000000000",
-          adopted: "0x0000000000000000000000000000000000000000",
-        },
-        /// CONSENSYS-ZKEVM-TEST
-        "1668247156": {
-          local: "0xcAA61BCAe7D37Fe9C33c0D8671448254eef44D63",
-          adopted: "0xcAA61BCAe7D37Fe9C33c0D8671448254eef44D63",
-        },
-        /// POLYGON-ZKEVM-TEST
-        "1887071092": {
-          local: "0x0000000000000000000000000000000000000000",
-          adopted: "0x0000000000000000000000000000000000000000",
+        /// BSC
+        "6450786": {
+          local: "0x489580eB70a50515296eF31E8179fF3e77E24965",
+          adopted: "0x489580eB70a50515296eF31E8179fF3e77E24965",
         },
       },
+    },
     ```
 
 {% hint style="info" %}
@@ -97,63 +151,70 @@ To make it easier to test and track your token transfers, we recommend adding yo
 
 1.  Submit a PR to [the ConnextScan repository config](https://github.com/CoinHippo-Labs/connextscan-ui/blob/main/config/testnet/assets.json).
 
-    * As an example:
+    * `RADAR` as an example:
 
     ```json
     {
-      "id": "tkn",
-      "symbol": "TKN",
-      "name": "TKN",
-      "image": "/logos/assets/tkn.png",
-      "is_stablecoin": true,
+      "id": "radar",
+      "symbol": "RADAR",
+      "name": "DappRadar",
+      "image": "/logos/assets/radar.png",
+      "is_xERC20": true,
+      "is_stablecoin": false,
       "contracts": [
         {
-          "contract_address": "0x16F63C5036d3F48A239358656a8f123eCE85789C",
-          "chain_id": 5,
+          "contract_address": "0x44709a920fCcF795fbC57BAA433cc3dd53C44DbE",
+          "chain_id": 1,
           "decimals": 18,
-          "symbol": "TKN"
+          "symbol": "RADAR",
+          "xERC20": "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
+          "lockbox": "0xFf6792A39F44FB67B4796906a5Cb77C677328858",
+          "lockbox_adapter": "0x6ea3dc2e17a0466b36dd3258574e0bd2e4685452"
         },
         {
-          "contract_address": "0x3Db593146464816F10d4eBA4743C76A5A4D08425",
-          "chain_id": 420,
+          "contract_address": "0x489580eB70a50515296eF31E8179fF3e77E24965",
+          "chain_id": 56,
           "decimals": 18,
-          "symbol": "TKN"
+          "symbol": "RADAR"
         }
       ],
-      "color": "#000000"
-    },
-    ```
-2.  Submit a PR to the [Bridge repository config](https://github.com/CoinHippo-Labs/connext-bridge/blob/main/config/testnet/assets.json).
-
-    * As an example:
-
-    ```json
-    {
-      "id": "tkn",
-      "symbol": "TKN",
-      "name": "TKN",
-      "image": "/logos/assets/tkn.png",
-      "is_stablecoin": true,
-      "contracts": [
-        {
-          "contract_address": "0x16F63C5036d3F48A239358656a8f123eCE85789C",
-          "chain_id": 5,
-          "decimals": 18,
-          "symbol": "TKN"
-        },
-        {
-          "contract_address": "0x3Db593146464816F10d4eBA4743C76A5A4D08425",
-          "chain_id": 420,
-          "decimals": 18,
-          "symbol": "TKN"
-        }
-      ],
-      "color": "#000000",
+      "color": "#009DFF",
       "group": "other_tokens"
+    }
+    ```
+2.  Submit a similar PR to the [Bridge repository config](https://github.com/CoinHippo-Labs/connext-bridge/blob/main/config/testnet/assets.json).
+
+    * `RADAR` an example:
+
+    ```json
+    {
+      "id": "radar",
+      "symbol": "RADAR",
+      "name": "DappRadar",
+      "image": "/logos/assets/radar.png",
+      "is_xERC20": true,
+      "contracts": [
+        {
+          "contract_address": "0x44709a920fCcF795fbC57BAA433cc3dd53C44DbE",
+          "chain_id": 1,
+          "decimals": 18,
+          "symbol": "RADAR",
+          "xERC20": "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
+          "lockbox": "0xFf6792A39F44FB67B4796906a5Cb77C677328858",
+          "lockbox_adapter": "0x6ea3dc2e17a0466b36dd3258574e0bd2e4685452"
+        },
+        {
+          "contract_address": "0x489580eB70a50515296eF31E8179fF3e77E24965",
+          "chain_id": 56,
+          "decimals": 18,
+          "symbol": "RADAR"
+        }
+      ],
+      "color": "#009DFF"
     },
     ```
 
-And that’s it! Once these PRs are merged, you should see your token appear on [https://testnet.connextscan.io](https://testnet.connextscan.io) and [https://testnet.bridge.connext.network](https://testnet.bridge.connext.network).
+And that’s it! Once these PRs are merged, you'll have your token appear on [https://connextscan.io](https://testnet.connextscan.io) and [https://bridge.connext.network](https://testnet.bridge.connext.network).
 
 ## Router Liquidity
 
@@ -165,21 +226,4 @@ At this point, your token should be transferrable across chains with no added fe
 
 If your usecase requires fast (i.e. <2 minute) transfers across chains, you will need some routers in our network to supply some liquidity to execute transactions immediately on behalf of users.
 
-1.  **For testnet**. This is pretty easy to set up:
-
-    * Mint or faucet your tokens to your address on each supported chain.
-    * Navigate to a router’s page on Connextscan - we recommend [the Connext Labs router here](https://testnet.connextscan.io/router/0xd2ad711861ab345977b7379c81165708c8717ff1) as other routers may have inconsistent uptime.
-    * Click `Manage Router`
-    * Add liquidity on each chain
-
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48b6e1ee-e854-4e31-8dbc-947d526b5a51/Untitled.png)
-2. **For mainnet.** Please reach out to the Connext team and we can help work through options here with our router partners.
-
-## Mainnet Deployment
-
-Getting set up on mainnet is largely the same as the testnet process. You’ll need to submit PRs to the following files instead of the testnet ones:
-
-1. [ChainData (same file as above instructions).](https://github.com/connext/chaindata/blob/main/crossChain.json)
-2. [Mainnet allowlist config](https://github.com/connext/monorepo/blob/main/packages/deployments/contracts/src/cli/init/config/mainnet/production.ts).
-3. [Mainnet ConnextScan config.](https://github.com/CoinHippo-Labs/connextscan-ui/blob/main/config/mainnet/assets.json)
-4. [Mainnet Bridge config.](https://github.com/CoinHippo-Labs/connext-bridge/blob/main/config/mainnet/assets.json)
+Please reach out to the Connext team and we can help work through options here with our router partners.
