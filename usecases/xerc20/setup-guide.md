@@ -4,7 +4,7 @@ Hello! 👋 This document will guide you through the process of setting up your 
 
 ## Prerequisites
 
-Let's begin by getting a comprehensive understanding of the steps to follow based on your token's current situation.
+Let's begin by getting a comprehensive understanding of the required steps based on your token's current situation.
 
 #### 1. Categorize your token
 
@@ -13,6 +13,12 @@ Determine which of the following categories best describes your token's current 
 * **Category A**: The token is new and is not deployed anywhere.
 * **Category B**: The token already exists on one chain.
 * **Category C**: The token already exists on multiple chains.
+
+{% hint style="info" %}
+If you want to spin up an `xERC20` on testnet, the category may be different from your mainnet token. We recommend emulating your mainnet token setup if your goal is to testrun the process on testnet.\
+\
+For example: on mainnet, your token `TKN`is deployed to Ethereum already (**Category B**). Then on testnet, you should deploy a `TKN` to Goerli and follow the steps for a **Category B** token.
+{% endhint %}
 
 #### 2. Define your token's "home" chain
 
@@ -59,15 +65,33 @@ Bridging from Arbitrum to Ethereum:
 
 ## Deploying Contracts
 
-{% hint style="info" %}
-The [ERC-7281](https://github.com/ethereum/EIPs/pull/7281) specification requires compliant tokens to implement the ERC-20 interface along with some additional rate limit interfaces.
-{% endhint %}
-
 Now that you have an idea of how your tokens should be set up, let's move on to the actual deployment procedures.&#x20;
 
 #### xERC20s and Lockboxes
 
-Connext provides an [xERC20 Github repository](https://github.com/connext/xERC20) that contains implementations of `xERC20`, `Lockbox`, and scripts to deploy them. We suggest you deploy from a fork of this repo. See the `README` for instructions. You will configure the scripts based on which chains you need to have Lockbox setups.
+Connext provides an [xERC20 Github repository](https://github.com/connext/xERC20) that contains fully compliant implementations of `xERC20`, `Lockbox`, and scripts to deploy them. We suggest you deploy from a fork of this repo. See the `README` for instructions. You will configure the scripts based on which chains you need to have Lockbox setups.
+
+{% hint style="info" %}
+The [ERC-7281](https://github.com/ethereum/EIPs/pull/7281) specification requires compliant tokens to implement ERC-20 along with mint/burn and some additional rate limit interfaces. The absolute _minimal_ interface needed is the ERC-20 interface plus mint/burn:
+
+```solidity
+/**
+ * @notice Mints tokens for a user
+ * @dev Can only be called by a bridge
+ * @param _user The address of the user who needs tokens minted
+ * @param _amount The amount of tokens being minted
+ */
+function mint(address _user, uint256 _amount) external;
+
+/**
+ * @notice Burns tokens for a user
+ * @dev Can only be called by a bridge
+ * @param _user The address of the user who needs tokens burned
+ * @param _amount The amount of tokens being burned
+ */
+function burn(address _user, uint256 _amount) external;
+```
+{% endhint %}
 
 #### LockboxAdapter
 
