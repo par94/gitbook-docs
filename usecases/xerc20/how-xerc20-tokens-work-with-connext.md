@@ -1,4 +1,4 @@
-# How xERC20 Tokens Work with Connext
+# Connext and xERC20s
 
 Connext combines the security of bridging through canonical bridges (Arbitrum, Optimism, etc.) into a single, easy to use, developer interface.&#x20;
 
@@ -29,10 +29,5 @@ Unlike other token bridges, Connext prioritizes giving you sovereign control ove
 
 * We advocate for you to deploy and retain control over your own token implementations on each chain. This means you retain the ability to delist Connext if we’re not fulfilling your needs or list other bridges if you’d like to have multiple options.
 * **\[Coming soon]** With the above, we also make it possible for our token to be fungible against token representations deployed by the canonical bridges themselves. This means that regardless of whether a user sends a token through Connext to Optimism, or through the official Optimism Bridge, they are guaranteed to get the same asset.
-
-## Additional Resources
-
-* [Developer Documentation](https://docs.connext.network)
-* [Connext xERC20 Tokens Setup Guide](https://www.notion.so/Public-xTokens-Setup-Guide-be4e136a6db14191b8d61bd60563ebd0?pvs=21)
 
 Please contact [@maxlomu](https://t.me/maxlomu) or [@arjunbhuptani](https://t.me/arjunbhuptani) on Telegram if you have any questions!

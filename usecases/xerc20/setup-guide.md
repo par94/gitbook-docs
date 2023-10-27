@@ -1,6 +1,6 @@
-# Setup Guide
+# Detailed Setup Guide
 
-Hello! 👋 This document will guide you through the process of setting up your `xERC20` token with Connext.
+Hello! 👋 This section will guide you through the process of setting up your `xERC20` token.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Determine which of the following categories best describes your token's current 
 {% hint style="info" %}
 If you want to spin up an `xERC20` on testnet, the category may be different from your mainnet token. We recommend emulating your mainnet token setup if your goal is to testrun the process on testnet.\
 \
-For example: on mainnet, your token `TKN`is deployed to Ethereum already (**Category B**). Then on testnet, you should deploy a `TKN` to Goerli and follow the steps for a **Category B** token.
+For example: on mainnet, your token `TKN`is currently only deployed on Ethereum (**Category B**). Then on testnet, you should deploy a `TKN` to Goerli and follow the steps for a **Category B** token.
 {% endhint %}
 
 #### 2. Define your token's "home" chain
@@ -34,7 +34,7 @@ Based on your token's category:
   * You will deploy an `xERC20` on each chain you wish to support, including the home chain.
 * **Category B** and **Category C**:
   * On each chain with an existing token, you need to figure out if a Lockbox setup is needed (next section).
-  * You will deploy an `xERC20` to all other chains you wish to support.
+  * On all other chains you wish to support, you will just deploy an `xERC20`.
 
 ## Lockbox Setup
 
@@ -69,7 +69,11 @@ Now that you have an idea of how your tokens should be set up, let's move on to 
 
 #### xERC20s and Lockboxes
 
-Connext provides an [xERC20 Github repository](https://github.com/connext/xERC20) that contains fully compliant implementations of `xERC20`, `Lockbox`, and scripts to deploy them. We suggest you deploy from a fork of this repo. See the `README` for instructions. You will configure the scripts based on which chains you need to have Lockbox setups.
+The Wonderland team provides an [xERC20 Github repository](https://github.com/defi-wonderland/xERC20/tree/main) that contains fully compliant implementations of `xERC20`, `Lockbox`, and scripts to deploy them. Factory contracts have already been deployed on each chain listed under `/broadcast/MultichainDeploy.sol/{chain_id}/run-latest.json`.
+
+We suggest you deploy from a fork of this repo, please see the `README` for instructions. You will configure the scripts based on which chains you need to have Lockbox setups.
+
+If you wish to roll your own version of an xERC20, make sure your custom implementation is compliant with the standard.
 
 {% hint style="info" %}
 The [ERC-7281](https://github.com/ethereum/EIPs/pull/7281) specification requires compliant tokens to implement ERC-20 along with mint/burn and some additional rate limit interfaces. The absolute _minimal_ interface needed is the ERC-20 interface plus mint/burn:
@@ -95,13 +99,15 @@ function burn(address _user, uint256 _amount) external;
 
 #### LockboxAdapter
 
-You might have noticed there's a `LockBoxAdapter` contract as well in the diagram above when you have a Lockbox setup. This contract facilitates the unwrapping of `xERC20 -> ERC20` on the destination chain. This way, bridge UIs can deliver the asset that the user expects to get on the Lockbox chain.
+You might have noticed there's a `LockBoxAdapter` contract in the diagram above when you have a Lockbox setup. This contract facilitates the unwrapping of `xERC20 -> ERC20` on the destination chain.&#x20;
+
+We recommend deploying an adapter on each Lockbox chain so that bridge UIs can deliver the asset that the user expects to receive.
 
 You can deploy a simple Lockbox adapter like [this one](https://github.com/connext/chain-abstraction-integration/blob/next-lockbox-adapter/contracts/integration/Connext/NextLockboxAdapter.sol).
 
 #### Whitelisting bridges
 
-As the token issuer, you have the power to decide which bridges can mint/burn your token and the ability to set rate limits for per bridge:
+As the token issuer, you have the power to decide which bridges can mint/burn your token and the ability to set rate limits per bridge:
 
 ```
 /**
@@ -116,11 +122,13 @@ function setLimits(address _bridge, uint256 _mintingLimit, uint256 _burningLimit
 
 These limits will replenish after`_DURATION` (by default the repo deploys `xERC20` with a value of 1 day).
 
-Once your token is deployed to all the chains and assuming you want Connext to be able to bridge your token, please whitelist Connext by calling `setLimits`. You can find all Connext contract addresses in [Deployments](../../resources/deployments.md).
+Once your token is deployed, you can call `setLimits` to grant any bridge the privilege to mint/burn your token on that chain.
 
-## Getting Allowlisted For Connext
+## Enabling Connext as a Bridge
 
-Your tokens need to be allowlisted in Connext before the protocol can know to mint/burn them across chains. This process involves submitting two PRs:
+If you want Connext to be able to bridge your token ([here's our pitch in the next section](how-xerc20-tokens-work-with-connext.md)), please whitelist Connext by calling `setLimits`. You can find all Connext contract addresses in [Deployments](../../resources/deployments.md).
+
+Your tokens then need to be allowlisted in Connext before the protocol can know to mint/burn them across chains. This process involves submitting two PRs:
 
 1.  The first PR must be submitted to our [ChainData mappings](https://github.com/connext/chaindata/blob/main/crossChain.json).
 
@@ -169,9 +177,9 @@ Your tokens need to be allowlisted in Connext before the protocol can know to mi
 
 Once this is done, the Connext Labs team will review your PRs to sanity check deployment details. Once your PR is approved, your tokens will be whitelisted and transferrable across chains!
 
-## ConnextScan and Bridge Support
+## ConnextScan and Bridge UI Support
 
-To make it easier to test and track your token transfers, we recommend adding your token to ConnextScan (the Connext network explorer) and the Connext Bridge. You’ll need to submit two more PRs for this:
+To make it easier to test and track your token transfers, we recommend adding your token to ConnextScan (the Connext network explorer) and the Connext Bridge UI. You’ll need to submit two more PRs for this:
 
 1.  Submit a PR to [the ConnextScan repository config](https://github.com/CoinHippo-Labs/connextscan-ui/blob/main/config/testnet/assets.json).
 

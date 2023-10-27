@@ -52,9 +52,9 @@
 ## 📦 Usecases
 
 * [xERC20](usecases/xerc20/README.md)
-  * [How xERC20 Tokens Work with Connext](usecases/xerc20/how-xerc20-tokens-work-with-connext.md)
-  * [Requirements](usecases/xerc20/requirements.md)
-  * [Setup Guide](usecases/xerc20/setup-guide.md)
+  * [Setup Overview](usecases/xerc20/requirements.md)
+  * [Detailed Setup Guide](usecases/xerc20/setup-guide.md)
+  * [Connext and xERC20s](usecases/xerc20/how-xerc20-tokens-work-with-connext.md)
 * [Chain Abstraction](usecases/chain-abstraction/README.md)
   * [Chain Abstraction Guide](usecases/chain-abstraction/chain-abstraction-guide.md)
 * [xGovernance](usecases/xgovernance.md)
