@@ -24,7 +24,7 @@ This is a Connext Governance Proposal Template. Proposers are required to copy a
 
 * **Abstract** - Abstract is a multi-sentence (short paragraph) summary. This should be a very short and human-readable version of the specification section. Someone should be able to read only the abstract to understand what the proposal does.
 * **Motivation** - A statement on why the community should implement the CGP.
-* **Rationale** - An explanation of how the CGP aligns with the community's mission and guiding principles[.](https://docs.connext.network/v/dao-documentation/dao-documents/constitution) Please reviews the [Constitution](https://docs.connext.network/v/dao-documentation/dao-documents/constitution) for vision and guiding principles.
+* **Rationale** - An explanation of how the CGP aligns with the community's mission and guiding principles[.](https://docs.connext.network/v/dao-documentation/dao-documents/constitution) Please reviews the [Constitution](https://dao-docs.connext.network/dao-documents/constitution) for vision and guiding principles.
 * **Key Terms** - Definitions of any terms within the proposal that are unique to the proposal, new to the community, and/or industry-specific. This section is optional, but recommended.
 * **Specifications** - The specification should describe the proposal in detail. The specification should be detailed enough to cover all the details of the proposal.
 * **Steps to Implement** - The steps to implement the CGP, including associated costs, manpower, and other resources for each step where applicable. CGPs that involve transactions with third parties (such as grants) will need to ensure that applicable legal documentation and procedures are also included.
