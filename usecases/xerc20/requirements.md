@@ -3,7 +3,7 @@
 The steps to set up your xERC20 are very straightforward:
 
 1. Choose a Home chain for your tokens (or whatever chain your token is already deployed to!)
-2. Deploy [Mintable/Burnable](https://github.com/defi-wonderland/xTokens) Token representations on the other chains you want to support.
+2. Deploy [Mintable/Burnable](https://github.com/defi-wonderland/xERC20/) Token representations on the other chains you want to support.
 3. Allow bridges to support your xERC20 with custom rate limits.&#x20;
 
 To enable Connext as one of your allowlisted bridges:
