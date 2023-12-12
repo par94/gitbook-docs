@@ -126,125 +126,92 @@ Once your token is deployed, you can call `setLimits` to grant any bridge the pr
 
 ## Enabling Connext as a Bridge
 
-If you want Connext to be able to bridge your token ([here's our pitch in the next section](how-xerc20-tokens-work-with-connext.md)), please whitelist Connext by calling `setLimits`. You can find all Connext contract addresses in [Deployments](../../resources/deployments.md).
+If you want Connext to be able to bridge your token ([here's our pitch in the next section](how-xerc20-tokens-work-with-connext.md)), please go through the following steps.
 
-Your tokens then need to be allowlisted in Connext before the protocol can know to mint/burn them across chains. This process involves submitting two PRs:
+1. Set rate limits for Connext.
+   * For each chain where your xERC20 is deployed, call `setLimits` as the owner/governor. Use the appropriate Connext address listed under "Core Contract" [here](../../resources/deployments.md) as the `_bridge` parameter.
+2. Submit a PR to our [ChainData mappings](https://github.com/connext/chaindata/blob/main/crossChain.json).
+   *   For each chain where your xERC20 is deployed, add an object keyed by its address like this:
 
-1.  The first PR must be submitted to our [ChainData mappings](https://github.com/connext/chaindata/blob/main/crossChain.json).
+       ```json
+       "0x4c781E4D22cfaAdA520cAe4aF9097C5ecf9C3A71": {
+         "name": "xDappRadar",
+         "symbol": "xRADAR",
+         "decimals": 18
+       }
+       ```
+3. Submit a PR to our [allowlisting scripts](https://github.com/connext/monorepo/blob/main/packages/deployments/contracts/src/cli/init/config/mainnet/production.ts).
+   *   Under the `assets` key in the configuration object, add another object to the list like this:
 
-    * For each chain in the mappings that your token is deployed to, add an object that looks like the following, keyed by your token address. Note that the `mainnetEquivalent` field refers to your asset’s address on Ethereum L1 - this is used to retrieve oracle pricing data in the cases where it is relevant. If your token is not deployed to Ethereum L1, feel free to leave this field blank.
-
-    ```json
-    "0x4c781E4D22cfaAdA520cAe4aF9097C5ecf9C3A71": {
-      "name": "xDappRadar",
-      "symbol": "xRADAR",
-      "mainnetEquivalent": "0x44709a920fccf795fbc57baa433cc3dd53c44dbe",
-      "decimals": 18
-    }
-    ```
-2.  The second PR must be submitted to [our allowlisting scripts](https://github.com/connext/monorepo/blob/main/packages/deployments/contracts/src/cli/init/config/testnet/production.ts).
-
-    * Each representation is indexed by domain (a Connext-specific identifier per chain that exists for forward compatibility with non-evm chains). [You can find a list of domains here](broken-reference).
-    * Under `canonical,` the domain must be set to `11111` and the `address` used here should be your home chain's `xERC20`. It will be used again under `representations`.
-    * For example, `RADAR`'s home chain is Ethereum and its `xERC20` token is configured under `representations`in Ethereum's domain ID `6648936`. It is also set under `canonical` in the domain ID `11111`.
-
-    ```json
-    {
-      name: "RADAR",
-      canonical: {
-        domain: "11111",
-        address: "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
-        decimals: 18,
-      },
-      representations: {
-        /// ETHEREUM
-        "6648936": {
-          local: "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
-          adopted: "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
-        },
-        /// BSC
-        "6450786": {
-          local: "0x489580eB70a50515296eF31E8179fF3e77E24965",
-          adopted: "0x489580eB70a50515296eF31E8179fF3e77E24965",
-        },
-      },
-    },
-    ```
+       ```json
+       {
+         name: "RADAR",
+         canonical: {
+           domain: "11111",
+           address: "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
+           decimals: 18,
+         },
+         representations: {
+           /// ETHEREUM
+           "6648936": {
+             local: "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
+             adopted: "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
+           },
+           /// BSC
+           "6450786": {
+             local: "0x489580eB70a50515296eF31E8179fF3e77E24965",
+             adopted: "0x489580eB70a50515296eF31E8179fF3e77E24965",
+           },
+         },
+       },
+       ```
+   * The `canonical` object should always have `11111` as the `domain`. Change the `address` and `decimals` to match your home chain xERC20. For example, `RADAR`'s home chain is Ethereum.
+   * For each chain where your xERC20 is deployed (including the home chain), add an entry into the `representations` field keyed on the chain's `domainId`.&#x20;
+     * [You can look up each chain's domainId here](../../resources/supported-chains.md). We encourage commenting the chain name above each entry.
+     * `local` and `adopted` should both be set to the xERC20 address. These exist as separate fields for non-xERC20 assets.
+     * _Note: `domainId` is a Connext-specific identifier per chain that exists for forward compatibility with non-evm chains._
 
 {% hint style="info" %}
-📌 Please reference the ChainData PR in your PR to our allowlisting scripts to make it easier for the reviewer!
+📌 Please reference the ChainData PR in the allowlisting script PR to expedite the review process!
 {% endhint %}
 
 Once this is done, the Connext Labs team will review your PRs to sanity check deployment details. Once your PR is approved, your tokens will be whitelisted and transferrable across chains!
 
-## ConnextScan and Bridge UI Support
+## Connextscan and Bridge UI Support
 
-To make it easier to test and track your token transfers, we recommend adding your token to ConnextScan (the Connext network explorer) and the Connext Bridge UI. You’ll need to submit two more PRs for this:
+To get your token listed on our [Bridge UI](https://bridge.connext.network) and be able to track transfers in the [Connext explorer](https://connextscan.io/), you’ll need to submit two more PRs:
 
-1.  Submit a PR to [the ConnextScan repository config](https://github.com/CoinHippo-Labs/connextscan-ui/blob/main/config/testnet/assets.json).
+1. Submit a PR to the [Connextscan config](https://github.com/CoinHippo-Labs/connextscan-ui/blob/main/config/mainnet/assets.json).
+   *   Create a new object in the list. Using `RADAR` as an example where it has a lockbox setup on Ethereum as its home chain:
 
-    * `RADAR` as an example:
-
-    ```json
-    {
-      "id": "radar",
-      "symbol": "RADAR",
-      "name": "DappRadar",
-      "image": "/logos/assets/radar.png",
-      "is_xERC20": true,
-      "is_stablecoin": false,
-      "contracts": [
-        {
-          "contract_address": "0x44709a920fCcF795fbC57BAA433cc3dd53C44DbE",
-          "chain_id": 1,
-          "decimals": 18,
-          "symbol": "RADAR",
-          "xERC20": "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
-          "lockbox": "0xFf6792A39F44FB67B4796906a5Cb77C677328858",
-          "lockbox_adapter": "0x6ea3dc2e17a0466b36dd3258574e0bd2e4685452"
-        },
-        {
-          "contract_address": "0x489580eB70a50515296eF31E8179fF3e77E24965",
-          "chain_id": 56,
-          "decimals": 18,
-          "symbol": "RADAR"
-        }
-      ],
-      "color": "#009DFF",
-      "group": "other_tokens"
-    }
-    ```
-2.  Submit a similar PR to the [Bridge repository config](https://github.com/CoinHippo-Labs/connext-bridge/blob/main/config/testnet/assets.json).
-
-    * `RADAR` an example:
-
-    ```json
-    {
-      "id": "radar",
-      "symbol": "RADAR",
-      "name": "DappRadar",
-      "image": "/logos/assets/radar.png",
-      "is_xERC20": true,
-      "contracts": [
-        {
-          "contract_address": "0x44709a920fCcF795fbC57BAA433cc3dd53C44DbE",
-          "chain_id": 1,
-          "decimals": 18,
-          "symbol": "RADAR",
-          "xERC20": "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
-          "lockbox": "0xFf6792A39F44FB67B4796906a5Cb77C677328858",
-          "lockbox_adapter": "0x6ea3dc2e17a0466b36dd3258574e0bd2e4685452"
-        },
-        {
-          "contract_address": "0x489580eB70a50515296eF31E8179fF3e77E24965",
-          "chain_id": 56,
-          "decimals": 18,
-          "symbol": "RADAR"
-        }
-      ],
-      "color": "#009DFF"
-    },
-    ```
+       ```json
+       {
+         "id": "radar",
+         "symbol": "RADAR",
+         "name": "DappRadar",
+         "image": "/logos/assets/radar.png",
+         "is_xERC20": true,
+         "contracts": [
+           {
+             "contract_address": "0x44709a920fCcF795fbC57BAA433cc3dd53C44DbE",
+             "chain_id": 1,
+             "decimals": 18,
+             "symbol": "RADAR",
+             "xERC20": "0x202426c15a18a0e0fE3294415E66421891E2EB7C",
+             "lockbox": "0xFf6792A39F44FB67B4796906a5Cb77C677328858",
+             "lockbox_adapter": "0x6ea3dc2e17a0466b36dd3258574e0bd2e4685452"
+           },
+           {
+             "contract_address": "0x489580eB70a50515296eF31E8179fF3e77E24965",
+             "chain_id": 56,
+             "decimals": 18,
+             "symbol": "RADAR"
+           }
+         ]
+       }
+       ```
+   * For each chain where your xERC20 is deployed, add an object to the `contracts` list. If your token has a lockbox setup, the `contract_address` should be the ERC20 instead of the xERC20. It should include the other relevant fields shown in the example above.
+2. Submit a similar PR to the [Bridge UI config](https://github.com/CoinHippo-Labs/connext-bridge/blob/main/config/mainnet/assets.json). You can use the exact same object here.
 
 And that’s it! Once these PRs are merged, you'll have your token appear on [https://connextscan.io](https://testnet.connextscan.io) and [https://bridge.connext.network](https://testnet.bridge.connext.network).
 
