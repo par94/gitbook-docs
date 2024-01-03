@@ -14,6 +14,7 @@ Domain IDs are unique to every bridge and differ from Chain IDs. Connext's `xcal
 | Arbitrum One     | 42161    | 1634886255 | ✅      |
 | Gnosis Chain     | 100      | 6778479    | ✅      |
 | BNB Chain        | 56       | 6450786    | ✅      |
+| Linea            | 59144    | 1818848877 | ✅      |
 
 ## Testnet
 

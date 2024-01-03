@@ -14,6 +14,7 @@ This subgraph is can be used to query Connext bridge transactions, transactions 
 | Polygon             | [v0-Polygon](https://thegraph.com/hosted-service/subgraph/connext/amarok-runtime-v0-polygon)           |
 | Binance Smart Chain | [v0-Bnb](https://thegraph.com/hosted-service/subgraph/connext/amarok-runtime-v0-bnb)                   |
 | Gnosis              | [v0-Gnosis](https://thegraph.com/hosted-service/subgraph/connext/amarok-runtime-v0-gnosis)             |
+| Linea               | [v0-Linea](https://connext.bwarelabs.com/subgraphs/name/connext/amarok-runtime-v0-linea)               |
 
 ## Testnet Subgraphs
 

@@ -158,6 +158,31 @@ A full list of deployed contracts can be found in the [deployments.json](https:/
 | ------------------------------------------------------------------------------------- | ------------------------------------------ | -------------- |
 | [Unwrapper](https://gnosisscan.io/address/0x642c27a96dFFB6f21443A89b789a3194Ff8399fa) | 0x642c27a96dFFB6f21443A89b789a3194Ff8399fa | WETH Unwrapper |
 
+### Linea
+
+> Domain ID: 1818848877
+
+> Chain ID: 59144
+
+| Core Contract                                                                                 | Address                                    |
+| --------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| [Connext](https://louper.dev/diamond/0x5bB83e95f63217CDa6aE3D181BA580Ef377D2109?network=xdai) | 0x5bB83e95f63217CDa6aE3D181BA580Ef377D2109 |
+
+| Asset Contract                                                                       | Address                                    | Flavor  |
+| ------------------------------------------------------------------------------------ | ------------------------------------------ | ------- |
+| [nextUSDC](https://gnosisscan.io/address/0x44CF74238d840a5fEBB0eAa089D05b763B73faB8) | 0x331152ca43B50B39F3a9f203685B98dbb9b42342 | Local   |
+| [USDC](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83)     | 0x176211869cA2b568f2A7D4EE941E073a821EE1ff | Adopted |
+| [nextWETH](https://gnosisscan.io/address/0x538E2dDbfDf476D24cCb1477A518A82C9EA81326) | 0x0573AD07cA4f74757e5B2417Bf225BEbeBcF66D9 | Local   |
+| [WETH](https://gnosisscan.io/address/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1)     | 0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f | Adopted |
+| [nextDAI](https://gnosisscan.io/address/0x0e1D5Bcd2Ac5CF2f71841A9667afC1E995CaAf4F)  | 0x7360a597290612787833EE924C449C61Cc0689E4 | Local   |
+| [DAI](https://gnosisscan.io/address/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d)      | 0x4AF15ec2A0BD43Db75dd04E62FAA3B8EF36b00d5 | Adopted |
+| [nextUSDT](https://gnosisscan.io/address/0xF4d944883D6FddC56d3534986feF82105CaDbfA1) | 0xbD7eAEd30936670C931B718F5D9014AFf82fC767 | Local   |
+| [USDT](https://gnosisscan.io/address/0x4ECaBa5870353805a9F068101A40E0f32ed605C6)     | 0xA219439258ca9da29E9Cc4cE5596924745e12B93 | Adopted |
+
+| Peripheral Contract                                                                   | Address                                    | Description    |
+| ------------------------------------------------------------------------------------- | ------------------------------------------ | -------------- |
+| [Unwrapper](https://gnosisscan.io/address/0x642c27a96dFFB6f21443A89b789a3194Ff8399fa) | 0x5A53576DDE5071719a9A3a9E78e68cbcDf863253 | WETH Unwrapper |
+
 ## Testnet Contracts
 
 Note that the Test Token is a mintable ERC20. The open `mint` function has the signature `mint(address account, uint256 amount)` and can be freely called.
