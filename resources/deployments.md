@@ -166,7 +166,7 @@ A full list of deployed contracts can be found in the [deployments.json](https:/
 
 | Core Contract                                                                                 | Address                                    |
 | --------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| [Connext](https://louper.dev/diamond/0x5bB83e95f63217CDa6aE3D181BA580Ef377D2109?network=xdai) | 0x5bB83e95f63217CDa6aE3D181BA580Ef377D2109 |
+| [Connext](https://louper.dev/diamond/0x5bB83e95f63217CDa6aE3D181BA580Ef377D2109?network=xdai) | 0xa05eF29e9aC8C75c530c2795Fa6A800e188dE0a9 |
 
 | Asset Contract                                                                       | Address                                    | Flavor  |
 | ------------------------------------------------------------------------------------ | ------------------------------------------ | ------- |
