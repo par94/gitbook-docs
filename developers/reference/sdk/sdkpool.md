@@ -36,33 +36,6 @@ providers.TransactionRequest object.
 
 ***
 
-### approveIfNeeded
-
-▸ **approveIfNeeded**(`domainId`, `assetId`, `amount`, `infiniteApprove?`): `Promise`<`undefined` | `TransactionRequest`>
-
-Returns the transaction request for an allowance approval.
-
-**Parameters**
-
-| Name              | Type      | Default value | Description                                       |
-| ----------------- | --------- | ------------- | ------------------------------------------------- |
-| `domainId`        | `string`  | `undefined`   | The domain ID.                                    |
-| `assetId`         | `string`  | `undefined`   | The address of the token.                         |
-| `amount`          | `string`  | `undefined`   | The amount of the token.                          |
-| `infiniteApprove` | `boolean` | `true`        | (optional) Whether to approve an infinite amount. |
-
-**Returns**
-
-`Promise`<`undefined` | `TransactionRequest`>
-
-providers.TransactionRequest object.
-
-**Inherited from**
-
-SdkShared.approveIfNeeded
-
-***
-
 ### calculateAddLiquidityPriceImpact
 
 ▸ **calculateAddLiquidityPriceImpact**(`domainId`, `tokenAddress`, `amountX`, `amountY`): `Promise`<`undefined` | `BigNumber`>
@@ -83,33 +56,6 @@ Calculates the price impact of adding liquidity to a pool.
 `Promise`<`undefined` | `BigNumber`>
 
 Price impact for adding liquidity, in 1e18 precision.
-
-***
-
-### calculateCanonicalKey
-
-▸ **calculateCanonicalKey**(`domainId`, `canonicalId`): `string`
-
-Returns the hash of the canonical ID + canonical domain.
-
-**`Remarks`**
-
-This key is used as the unique identifier for a canonical token, across all domains.
-
-**Parameters**
-
-| Name          | Type     | Description                           |
-| ------------- | -------- | ------------------------------------- |
-| `domainId`    | `string` | The canonical domain ID of the token. |
-| `canonicalId` | `string` | The canonical ID of the token.        |
-
-**Returns**
-
-`string`
-
-**Inherited from**
-
-SdkShared.calculateCanonicalKey
 
 ***
 
@@ -301,28 +247,6 @@ Object containing apr and apy.
 
 ***
 
-### changeSignerAddress
-
-▸ **changeSignerAddress**(`signerAddress`): `Promise`<`void`>
-
-Switches the signer address in the SDK config.
-
-**Parameters**
-
-| Name            | Type     | Description             |
-| --------------- | -------- | ----------------------- |
-| `signerAddress` | `string` | The new signer address. |
-
-**Returns**
-
-`Promise`<`void`>
-
-**Inherited from**
-
-SdkShared.changeSignerAddress
-
-***
-
 ### getAdopted
 
 ▸ **getAdopted**(`domainId`, `tokenAddress`): `Promise`<`string`>
@@ -341,72 +265,6 @@ Reads the adopted token.
 `Promise`<`string`>
 
 The adopted token.
-
-***
-
-### getAssetsData
-
-▸ **getAssetsData**(): `Promise`<`AssetData`\[]>
-
-Fetches the list of registered assets.
-
-**Returns**
-
-`Promise`<`AssetData`\[]>
-
-Array of objects containing assets registered to the network, in the form of:
-
-**Inherited from**
-
-SdkShared.getAssetsData
-
-***
-
-### getAssetsDataByDomainAndKey
-
-▸ **getAssetsDataByDomainAndKey**(`domainId`, `key`): `Promise`<`undefined` | `AssetData`>
-
-Retrieve the asset data for a specific domain and key.
-
-**Parameters**
-
-| Name       | Type     | Description                                |
-| ---------- | -------- | ------------------------------------------ |
-| `domainId` | `string` | The domain ID.                             |
-| `key`      | `string` | The canonical hash of the canonical token. |
-
-**Returns**
-
-`Promise`<`undefined` | `AssetData`>
-
-The object containing asset data.
-
-**Inherited from**
-
-SdkShared.getAssetsDataByDomainAndKey
-
-***
-
-### getCanonicalTokenId
-
-▸ **getCanonicalTokenId**(`domainId`, `tokenAddress`): `Promise`<\[`string`, `string`]>
-
-Returns the canonical ID and canonical domain of a token.
-
-**Parameters**
-
-| Name           | Type     | Description                           |
-| -------------- | -------- | ------------------------------------- |
-| `domainId`     | `string` | The canonical domain ID of the token. |
-| `tokenAddress` | `string` | The address of the token.             |
-
-**Returns**
-
-`Promise`<\[`string`, `string`]>
-
-**Inherited from**
-
-SdkShared.getCanonicalTokenId
 
 ***
 
@@ -682,84 +540,6 @@ Object containing fees, liquidity, and volume, in 1e18 precision.
 
 ***
 
-### getSupported
-
-▸ **getSupported**(): `Promise`<`ConnextSupport`\[]>
-
-Fetches the list of supported networks and assets.
-
-**Returns**
-
-`Promise`<`ConnextSupport`\[]>
-
-Array of objects containing networks and assets supported by the protocol, in the form of:
-
-```ts
-{	
-  "name": "arbitrum",	
-  "chainId": 42161,	
-  "domainId": "1634886255",	
-  "assets": [	
-    "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",	
-    "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"	
-  ]	
-},	
-```
-
-**Inherited from**
-
-SdkShared.getSupported
-
-***
-
-### isNextAsset
-
-▸ **isNextAsset**(`tokenAddress`): `Promise`<`undefined` | `boolean`>
-
-Returns whether the specified token is a Connext-issued (local) token.
-
-**Parameters**
-
-| Name           | Type     | Description               |
-| -------------- | -------- | ------------------------- |
-| `tokenAddress` | `string` | The address of the token. |
-
-**Returns**
-
-`Promise`<`undefined` | `boolean`>
-
-Boolean or undefined if the specified token is not registered.
-
-**Inherited from**
-
-SdkShared.isNextAsset
-
-***
-
-### parseConnextTransactionReceipt
-
-▸ **parseConnextTransactionReceipt**(`transactionReceipt`): `any`
-
-Parses a providers.TransactionReceipt for the logs.
-
-**Parameters**
-
-| Name                 | Type                 | Description                          |
-| -------------------- | -------------------- | ------------------------------------ |
-| `transactionReceipt` | `TransactionReceipt` | providers.TransactionReceipt object. |
-
-**Returns**
-
-`any`
-
-Array of providers.Log objects.
-
-**Inherited from**
-
-SdkShared.parseConnextTransactionReceipt
-
-***
-
 ### removeLiquidity
 
 ▸ **removeLiquidity**(`domainId`, `tokenAddress`, `amount`, `minAmounts?`, `deadline?`): `Promise`<`TransactionRequest`>
@@ -908,48 +688,3 @@ const sdkPool = await SdkPool.create(config);
 {% hint style="info" %}
 See the [Deployments](broken-reference) page for all domain IDs and asset addresses.
 {% endhint %}
-
-***
-
-### domainToChainName
-
-▸ `Static` **domainToChainName**(`domainId`): `string`
-
-Returns the chain name for a specified domain.
-
-**Parameters**
-
-| Name       | Type     | Description    |
-| ---------- | -------- | -------------- |
-| `domainId` | `string` | The domain ID. |
-
-**Returns**
-
-`string`
-
-The chain name.
-
-**Inherited from**
-
-SdkShared.domainToChainName
-
-***
-
-### getBlockNumberFromUnixTimestamp
-
-▸ `Static` **getBlockNumberFromUnixTimestamp**(`domainId`, `unixTimestamp`): `Promise`<`number`>
-
-**Parameters**
-
-| Name            | Type     | Description         |
-| --------------- | -------- | ------------------- |
-| `domainId`      | `string` | The domain ID.      |
-| `unixTimestamp` | `number` | The unix timestamp. |
-
-**Returns**
-
-`Promise`<`number`>
-
-**Inherited from**
-
-SdkShared.getBlockNumberFromUnixTimestamp
