@@ -232,6 +232,26 @@ The chain name.
 
 ***
 
+### chainIdToDomain
+
+▸ `Static` chainIdToDomain(`chainId`): `number`
+
+Returns the chain name for a specified domain.
+
+**Parameters**
+
+| Name      | Type     | Description    |
+| --------- | -------- | -------------- |
+| `chainId` | `number` | The domain ID. |
+
+**Returns**
+
+`number`
+
+The domain of the chain.
+
+***
+
 ### getBlockNumberFromUnixTimestamp
 
 ▸ `Static` **getBlockNumberFromUnixTimestamp**(`domainId`, `unixTimestamp`): `Promise`<`number`>
