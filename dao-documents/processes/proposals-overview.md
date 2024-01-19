@@ -53,7 +53,7 @@ _A governance forum post providing a description of a proposal._
 ### **Phase 2: Formal Vote**
 
 _A final governance forum post incorporating any feedback from the Temperature Check phase._\
-_The proposal in this phase should include the following sections:_ [_Connext Governance Proposal Template_](https://app.gitbook.com/o/5e3LmvXsgxY4Ysqtad89/s/yvLdyGupc5aMaHVTGRuy/\~/changes/21/dao-documents/processes/connext-governance-proposal-template)
+_The proposal in this phase should include the following sections:_ [_Connext Governance Proposal Template_](connext-governance-proposal-template.md)
 
 #### To Create a Formal Vote:
 
