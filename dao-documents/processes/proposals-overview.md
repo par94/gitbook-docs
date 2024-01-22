@@ -52,12 +52,12 @@ _A governance forum post providing a description of a proposal._
 
 ### **Phase 2: Formal Vote**
 
-_A final governance forum post incorporating any feedback from the Temperature Check phase._\
+_A final governance forum post incorporating any feedback from the Request for Comments phase._\
 _The proposal in this phase should include the following sections:_ [_Connext Governance Proposal Template_](connext-governance-proposal-template.md)
 
 #### To Create a Formal Vote:
 
-1. Create a topic in the Proposal Discussion category on the forum titled “Formal Vote \[Social/Constitutional/Executable \[Proposal Number]] — \[Your Title Here]” and link to any relevant Snapshot polls/discussion threads. Proposal numbers should be in a “CGP#” format. Topics that begin with “Formal Vote” that have not successfully passed Request for Comment stages should be removed by community moderators.
+1. Navigate to the relevant RFC and post a comment that the formal vote is live. Include the relevant title “Formal Vote \[Social/Constitutional/Executable \[Proposal Number]] — \[Your Title Here]” and link to any relevant Snapshot polls/discussion threads. Proposal numbers should be in a “CGP#” format. Topics that begin with “Formal Vote” that have not successfully passed Request for Comment stages should be removed by community moderators.
 2. Ensure at least 600,000 NEXT is delegated to your address in order to submit a proposal or find a delegate who has enough delegated NEXT to meet the proposal threshold and propose on your behalf.
    * **Social Proposal or Constitutional Amendment:** \
      Navigate to Snapshot and schedule the proposal for a snapshot vote. Votes are delayed by 2 days, and voting lasts for 7 days. If the snapshot vote passes, the proposal is passed, and you are done!
