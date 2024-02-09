@@ -15,6 +15,8 @@ Domain IDs are unique to every bridge and differ from Chain IDs. Connext's `xcal
 | Gnosis Chain     | 100      | 6778479    | ✅      |
 | BNB Chain        | 56       | 6450786    | ✅      |
 | Linea            | 59144    | 1818848877 | ✅      |
+| Metis            | 1088     | 1835365481 | ✅      |
+| Base             | 8453     | 1650553709 | Feb 14 |
 
 ## Testnet
 
