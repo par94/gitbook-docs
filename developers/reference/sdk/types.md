@@ -77,10 +77,17 @@
 
 **Type declaration**
 
-| Name            | Type     | Value           |
-| --------------- | -------- | --------------- |
-| `XCalled`       | `string` | "XCalled"       |
-| `Executed`      | `string` | "Executed"      |
-| `Reconciled`    | `string` | "Reconciled"    |
-| `CompletedFast` | `string` | "CompletedFast" |
-| `CompletedSlow` | `string` | "CompletedSlow" |
+<table><thead><tr><th>Name</th><th width="106.66666666666666">Type</th><th>Value</th></tr></thead><tbody><tr><td><code>XCalled</code></td><td><code>string</code></td><td>"XCalled"</td></tr><tr><td><code>Executed</code></td><td><code>string</code></td><td>"Executed"</td></tr><tr><td><code>Reconciled</code></td><td><code>string</code></td><td>"Reconciled"</td></tr><tr><td><code>CompletedFast</code></td><td><code>string</code></td><td>"CompletedFast"</td></tr><tr><td><code>CompletedSlow</code></td><td><code>string</code></td><td>"CompletedSlow"</td></tr></tbody></table>
+
+### XTransferErrorStatus
+
+Ƭ **XTransferStatus**: `Object`
+
+**Type declaration**
+
+| Name           | Type   | Value            |
+| -------------- | ------ | ---------------- |
+| LowSlippage    | string | "LowSlippage"    |
+| LowRelayerFee  | string | "LowRelayerFee"  |
+| ExecutionError | string | "ExecutionError" |
+| NoBidsReceived | string | "NoBidsReceived" |

@@ -65,7 +65,7 @@
 * [Deployments](resources/deployments.md)
 * [Supported Chains](resources/supported-chains.md)
 
-## 🖥 Routers
+## 🖥️ Routers
 
 * [Basics](routers/routers-intro.md)
 * [Spinning Up](routers/spinning-up.md)

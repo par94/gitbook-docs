@@ -50,17 +50,18 @@ Fetches the transfers that match filter criteria.
 
 **Parameters**
 
-| Name                      | Type              |
-| ------------------------- | ----------------- |
-| `params`                  | `Object`          |
-| `params.range?`           | `Object`          |
-| `params.range.limit?`     | `number`          |
-| `params.range.offset?`    | `number`          |
-| `params.routerAddress?`   | `string`          |
-| `params.status?`          | `XTransferStatus` |
-| `params.transactionHash?` | `string`          |
-| `params.transferId?`      | `string`          |
-| `params.userAddress?`     | `string`          |
+| Name                      | Type                   |
+| ------------------------- | ---------------------- |
+| `params`                  | `Object`               |
+| `params.range?`           | `Object`               |
+| `params.range.limit?`     | `number`               |
+| `params.range.offset?`    | `number`               |
+| `params.routerAddress?`   | `string`               |
+| `params.status?`          | `XTransferStatus`      |
+| `params.transactionHash?` | `string`               |
+| `params.transferId?`      | `string`               |
+| `params.userAddress?`     | `string`               |
+| `params.errorStatus?`     | `XTransferErrorStatus` |
 
 **Returns**
 
