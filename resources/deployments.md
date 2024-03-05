@@ -164,24 +164,57 @@ A full list of deployed contracts can be found in the [deployments.json](https:/
 
 > Chain ID: 59144
 
-| Core Contract                                                                                 | Address                                    |
-| --------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| [Connext](https://louper.dev/diamond/0x5bB83e95f63217CDa6aE3D181BA580Ef377D2109?network=xdai) | 0xa05eF29e9aC8C75c530c2795Fa6A800e188dE0a9 |
+| Core Contract                                                                         | Address                                    |
+| ------------------------------------------------------------------------------------- | ------------------------------------------ |
+| [Connext](https://lineascan.build/address/0xa05eF29e9aC8C75c530c2795Fa6A800e188dE0a9) | 0xa05eF29e9aC8C75c530c2795Fa6A800e188dE0a9 |
 
-| Asset Contract                                                                       | Address                                    | Flavor  |
-| ------------------------------------------------------------------------------------ | ------------------------------------------ | ------- |
-| [nextUSDC](https://gnosisscan.io/address/0x44CF74238d840a5fEBB0eAa089D05b763B73faB8) | 0x331152ca43B50B39F3a9f203685B98dbb9b42342 | Local   |
-| [USDC](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83)     | 0x176211869cA2b568f2A7D4EE941E073a821EE1ff | Adopted |
-| [nextWETH](https://gnosisscan.io/address/0x538E2dDbfDf476D24cCb1477A518A82C9EA81326) | 0x0573AD07cA4f74757e5B2417Bf225BEbeBcF66D9 | Local   |
-| [WETH](https://gnosisscan.io/address/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1)     | 0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f | Adopted |
-| [nextDAI](https://gnosisscan.io/address/0x0e1D5Bcd2Ac5CF2f71841A9667afC1E995CaAf4F)  | 0x7360a597290612787833EE924C449C61Cc0689E4 | Local   |
-| [DAI](https://gnosisscan.io/address/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d)      | 0x4AF15ec2A0BD43Db75dd04E62FAA3B8EF36b00d5 | Adopted |
-| [nextUSDT](https://gnosisscan.io/address/0xF4d944883D6FddC56d3534986feF82105CaDbfA1) | 0xbD7eAEd30936670C931B718F5D9014AFf82fC767 | Local   |
-| [USDT](https://gnosisscan.io/address/0x4ECaBa5870353805a9F068101A40E0f32ed605C6)     | 0xA219439258ca9da29E9Cc4cE5596924745e12B93 | Adopted |
+<table><thead><tr><th>Asset Contract</th><th width="251.33333333333331">Address</th><th>Flavor</th></tr></thead><tbody><tr><td><a href="https://lineascan.build/address/0x331152ca43B50B39F3a9f203685B98dbb9b42342">nextUSDC</a></td><td>0x331152ca43B50B39F3a9f203685B98dbb9b42342</td><td>Local</td></tr><tr><td><a href="https://lineascan.build/address/0x176211869cA2b568f2A7D4EE941E073a821EE1ff">USDC</a></td><td>0x176211869cA2b568f2A7D4EE941E073a821EE1ff</td><td>Adopted</td></tr><tr><td><a href="https://lineascan.build/address/0x0573AD07cA4f74757e5B2417Bf225BEbeBcF66D9">nextWETH</a></td><td>0x0573AD07cA4f74757e5B2417Bf225BEbeBcF66D9</td><td>Local</td></tr><tr><td><a href="https://lineascan.build/address/0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f">WETH</a></td><td>0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f</td><td>Adopted</td></tr><tr><td><a href="https://lineascan.build/address/0x7360a597290612787833EE924C449C61Cc0689E4">nextDAI</a></td><td>0x7360a597290612787833EE924C449C61Cc0689E4</td><td>Local</td></tr><tr><td><a href="https://lineascan.build/address/0x4AF15ec2A0BD43Db75dd04E62FAA3B8EF36b00d5">DAI</a></td><td>0x4AF15ec2A0BD43Db75dd04E62FAA3B8EF36b00d5</td><td>Adopted</td></tr><tr><td><a href="https://lineascan.build/address/0xbD7eAEd30936670C931B718F5D9014AFf82fC767">nextUSDT</a></td><td>0xbD7eAEd30936670C931B718F5D9014AFf82fC767</td><td>Local</td></tr><tr><td><a href="https://lineascan.build/address/0xA219439258ca9da29E9Cc4cE5596924745e12B93">USDT</a></td><td>0xA219439258ca9da29E9Cc4cE5596924745e12B93</td><td>Adopted</td></tr></tbody></table>
 
-| Peripheral Contract                                                                   | Address                                    | Description    |
-| ------------------------------------------------------------------------------------- | ------------------------------------------ | -------------- |
-| [Unwrapper](https://gnosisscan.io/address/0x642c27a96dFFB6f21443A89b789a3194Ff8399fa) | 0x5A53576DDE5071719a9A3a9E78e68cbcDf863253 | WETH Unwrapper |
+| Peripheral Contract                                                                     | Address                                    | Description    |
+| --------------------------------------------------------------------------------------- | ------------------------------------------ | -------------- |
+| [Unwrapper](https://lineascan.build/address/0x5A53576DDE5071719a9A3a9E78e68cbcDf863253) | 0x5A53576DDE5071719a9A3a9E78e68cbcDf863253 | WETH Unwrapper |
+
+### Base
+
+> Domain ID: 1650553709
+
+> Chain ID: 8453
+
+| Core Contract                                                                      | Address                                    |
+| ---------------------------------------------------------------------------------- | ------------------------------------------ |
+| [Connext](https://basescan.org/address/0xB8448C6f7f7887D36DcA487370778e419e9ebE3F) | 0xB8448C6f7f7887D36DcA487370778e419e9ebE3F |
+
+<table><thead><tr><th>Asset Contract</th><th width="261.3333333333333">Address</th><th>Flavor</th></tr></thead><tbody><tr><td><a href="https://basescan.org/address/0xE08D4907b2C7aa5458aC86596b6D17B1feA03F7E">nextWETH</a></td><td>0xE08D4907b2C7aa5458aC86596b6D17B1feA03F7E</td><td>Local</td></tr><tr><td><a href="https://basescan.org/address/0x4200000000000000000000000000000000000006">WETH</a></td><td>0x4200000000000000000000000000000000000006</td><td>Adopted</td></tr><tr><td><a href="https://basescan.org/address/0xC90a82e926d3a87899b3717aba0262BF66Ef53E8">nextDAI</a></td><td>0xC90a82e926d3a87899b3717aba0262BF66Ef53E8</td><td>Local</td></tr><tr><td><a href="https://basescan.org/address/0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb">DAI</a></td><td>0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb</td><td>Adopted</td></tr><tr><td><a href="https://basescan.org/address/0x1ede59e0d39B14c038698B1036BDE9a4819C86D4">nextUSDC</a></td><td>0x1ede59e0d39B14c038698B1036BDE9a4819C86D4</td><td>Local</td></tr><tr><td><a href="https://basescan.org/address/0x833589fcd6edb6e08f4c7c32d4f71b54bda02913">USDC</a></td><td>0x833589fcd6edb6e08f4c7c32d4f71b54bda02913</td><td>Adopted</td></tr></tbody></table>
+
+<table><thead><tr><th>Peripheral Contract</th><th width="254.33333333333331">Address</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://basescan.org/address/0x01EdE4Fdf8CF7Ef9942a935305C3145f8dAa180A">Unwrapper</a></td><td>0x01EdE4Fdf8CF7Ef9942a935305C3145f8dAa180A</td><td>WETH Unwrapper</td></tr></tbody></table>
+
+### Metis
+
+> Domain ID: 1835365481
+
+> Chain ID: 1088
+
+| Core Contract                                                                                     | Address                                    |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| [Connext](https://andromeda-explorer.metis.io/address/0x6B142227A277CE62808E0Df93202483547Ec0188) | 0x6B142227A277CE62808E0Df93202483547Ec0188 |
+
+<table><thead><tr><th>Asset Contract</th><th width="261.3333333333333">Address</th><th>Flavor</th></tr></thead><tbody><tr><td><a href="https://andromeda-explorer.metis.io/address/0x3883B5Bdd61BA1b687de69eE50c9738D5ec501E9">nextWETH</a></td><td>0x3883B5Bdd61BA1b687de69eE50c9738D5ec501E9</td><td>Local</td></tr><tr><td><a href="https://andromeda-explorer.metis.io/address/0x420000000000000000000000000000000000000A">WETH</a></td><td>0x420000000000000000000000000000000000000a</td><td>Adopted</td></tr><tr><td><a href="https://andromeda-explorer.metis.io/address/0xa6A8d22D5da43C9f6E5cF7b4e50941784e70F688">nextUSDT</a></td><td>0xa6A8d22D5da43C9f6E5cF7b4e50941784e70F688</td><td>Local</td></tr><tr><td><a href="https://andromeda-explorer.metis.io/address/0xbB06DCA3AE6887fAbF931640f67cab3e3a16F4dC">USDT</a></td><td>0xbB06DCA3AE6887fAbF931640f67cab3e3a16F4dC</td><td>Adopted</td></tr><tr><td><a href="https://andromeda-explorer.metis.io/address/0x9ac9aD5A82Ccd0Ab7584a037A7A2334Dc3715Be2">nextUSDC</a></td><td>0x9ac9aD5A82Ccd0Ab7584a037A7A2334Dc3715Be2</td><td>Local</td></tr><tr><td><a href="https://andromeda-explorer.metis.io/address/0xEA32A96608495e54156Ae48931A7c20f0dcc1a21">USDC</a></td><td>0xEA32A96608495e54156Ae48931A7c20f0dcc1a21</td><td>Adopted</td></tr></tbody></table>
+
+<table><thead><tr><th>Peripheral Contract</th><th width="254.33333333333331">Address</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://andromeda-explorer.metis.io/address/0x8Ef3E1300857FDF616dfE2fcBced4ac6a61Fe774">Unwrapper</a></td><td>0x8Ef3E1300857FDF616dfE2fcBced4ac6a61Fe774</td><td>WETH Unwrapper</td></tr></tbody></table>
+
+### Mode
+
+> Domain ID: 1836016741
+
+> Chain ID: 34443
+
+| Core Contract                                                                               | Address                                    |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| [Connext](https://explorer.mode.network/address/0x7380511493DD4c2f1dD75E9CCe5bD52C787D4B51) | 0x7380511493DD4c2f1dD75E9CCe5bD52C787D4B51 |
+
+<table><thead><tr><th>Asset Contract</th><th width="261.3333333333333">Address</th><th>Flavor</th></tr></thead><tbody><tr><td><a href="https://explorer.mode.network/address/0x609aEfb9FB2Ee8f2FDAd5dc48efb8fA4EE0e80fB">nextWETH</a></td><td>0x609aEfb9FB2Ee8f2FDAd5dc48efb8fA4EE0e80fB</td><td>Local</td></tr><tr><td><a href="https://explorer.mode.network/address/0x4200000000000000000000000000000000000006">WETH</a></td><td>0x4200000000000000000000000000000000000006</td><td>Adopted</td></tr></tbody></table>
+
+<table><thead><tr><th>Peripheral Contract</th><th width="254.33333333333331">Address</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://explorer.mode.network/address/0x2c8DA9c3166085acebc70Ad9491cA2bfa10C8b9F">Unwrapper</a></td><td>0x2c8DA9c3166085acebc70Ad9491cA2bfa10C8b9F</td><td>WETH Unwrapper</td></tr></tbody></table>
 
 ## Testnet Contracts
 
