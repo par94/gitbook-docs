@@ -220,6 +220,69 @@ A full list of deployed contracts can be found in the [deployments.json](https:/
 
 Note that the Test Token is a mintable ERC20. The open `mint` function has the signature `mint(address account, uint256 amount)` and can be freely called.
 
+### Sepolia
+
+> Domain ID: 1936027759
+
+> Chain ID: 11155111
+
+| Core Contract | Address                                    |
+| ------------- | ------------------------------------------ |
+| Connext       | 0x445fbf9cCbaf7d557fd771d56937E94397f43965 |
+
+| Asset Contract | Address                                    | Flavor    |
+| -------------- | ------------------------------------------ | --------- |
+| TEST           | 0xd26e3540A0A368845B234736A0700E0a5A821bBA | Canonical |
+
+### Optimism-Sepolia
+
+> Domain ID: 1869640549
+
+> Chain ID: 11155420
+
+| Core Contract | Address                                    |
+| ------------- | ------------------------------------------ |
+| Connext       | 0x8247ed6d0a344eeae4edBC7e44572F1B70ECA82A |
+
+| Asset Contract | Address                                    | Flavor    |
+| -------------- | ------------------------------------------ | --------- |
+| TEST           | 0x7Fa13D6CB44164ea09dF8BCc673A8849092D435b | Canonical |
+
+### Arbitrum-Sepolia
+
+> Domain ID: 1633842021
+
+> Chain ID: 421614
+
+| Core Contract | Address                                    |
+| ------------- | ------------------------------------------ |
+| Connext       | 0x1780Ac087Cbe84CA8feb75C0Fb61878971175eb8 |
+
+| Asset Contract | Address                                    | Flavor    |
+| -------------- | ------------------------------------------ | --------- |
+| TEST           | 0xaBF282c88DeD3e386701a322e76456c062468Ac2 | Canonical |
+
+### X1-Testnet
+
+> Domain ID: 2016506996
+
+> Chain ID: 195
+
+| Core Contract | Address                                    |
+| ------------- | ------------------------------------------ |
+| Connext       | 0xDB8310cAa57B052ab270A573B512dc5644558f0A |
+
+| Asset Contract | Address                                    | Flavor    |
+| -------------- | ------------------------------------------ | --------- |
+| TEST           | 0x471F702E7D96E541488140042bCD1206Ae55CCa5 | Canonical |
+
+
+
+{% hint style="danger" %}
+Goerli will soon be deprecated. Please move to Sepolia!!\
+_Note: all the testnets below are hooked up with Goerli as the Hub chain. They will all be deprecated._
+{% endhint %}
+
 ### Goerli
 
 > Domain ID: 1735353714
