@@ -415,22 +415,6 @@ _Note: all the testnets below are hooked up with Goerli as the Hub chain. They w
 | ------------------- | ------- | ----------- |
 | Unwrapper           | TBD     | TBD         |
 
-## Offchain Agents
-
-### Sequencer
-
-Example endpoints can be found [here](https://github.com/connext/monorepo/blob/c694958e51b9f81cc100260d0776788276303087/packages/agents/sequencer/example.http#L15). For instance, you can check for queued transactions:
-
-[https://sequencer.testnet.connext.ninja/queued](https://sequencer.testnet.connext.ninja/queued)
-
-### Cartographer
-
-The Cartographer is a Connext-hosted service that stores transfer data to a persistent datastore. The data schema is bespoke for Connext cross-chain transfers and a REST API is available for retrieving details like transfer status, transfer history by user, and more.
-
-Example endpoints can be found [here](https://github.com/connext/monorepo/blob/c694958e51b9f81cc100260d0776788276303087/packages/agents/cartographer/api/example.http). For instance, you can query for all transfers:
-
-[https://postgrest.testnet.connext.ninja/transfers](https://postgrest.testnet.connext.ninja/transfers)
-
 ## User Interfaces
 
 ### Bridge UI
